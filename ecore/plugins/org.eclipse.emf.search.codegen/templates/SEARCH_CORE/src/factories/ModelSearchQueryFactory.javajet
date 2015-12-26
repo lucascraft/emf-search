@@ -1,0 +1,32 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.core.factories"
+	 imports=" org.eclipse.emf.search.codegen.model.generator.*"
+	 class="ModelSearchQueryFactory"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String basePackage = settings.getGenModel().getModelPluginPackageName();
+%>
+package search.factories;
+
+import org.eclipse.emf.search.core.engine.AbstractModelSearchQuery;
+import org.eclipse.emf.search.core.factories.IModelSearchQueryFactory;
+import org.eclipse.emf.search.core.parameters.IModelSearchQueryParameters;
+import search.engine.ModelSearchQuery;
+
+/**
+ * Wraps ModelSearchQuery creation.
+ */
+public class ModelSearchQueryFactory implements IModelSearchQueryFactory {
+	private static ModelSearchQueryFactory instance;
+	
+	public ModelSearchQueryFactory() {}
+	
+	public static ModelSearchQueryFactory getInstance() {
+		return instance == null ? instance = new ModelSearchQueryFactory() : instance;
+	}
+	
+	public AbstractModelSearchQuery createModelSearchQuery(String expr, IModelSearchQueryParameters p) {
+		return new ModelSearchQuery(expr, p);
+	}
+}

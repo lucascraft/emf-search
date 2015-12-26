@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_ZHP34Lz2EduWjOs2RiriMw">
+  <packagedElement xmi:type="uml:Class" xmi:id="_jf0OMLz2EduWjOs2RiriMw" name="A">
+    <ownedAttribute xmi:id="_lQ6YYLz2EduWjOs2RiriMw" name="b" type="_kHTsALz2EduWjOs2RiriMw" aggregation="composite">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l7rzsLz2EduWjOs2RiriMw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l7rzsbz2EduWjOs2RiriMw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kHTsALz2EduWjOs2RiriMw" name="B"/>
+</uml:Model>

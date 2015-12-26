@@ -1,0 +1,151 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.ui.areas"
+	 imports="java.util.Collection java.util.HashMap java.util.Map java.util.List org.eclipse.emf.codegen.ecore.genmodel.* java.util.ArrayList org.eclipse.emf.search.codegen.model.generator.*"
+	 class="ModelSearchParticipantArea"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String basePackage = settings.getGenModel().getModelPluginID();
+	String editPluginClass = settings.getGenModel().getEditPluginClass();
+	List<GenPackage> genPackagesList = settings.getGenModel().getGenPackages();
+	List<EStringAccessor> genTypeParameter = settings.getTextualSettings().getEStringAccessors();
+%>
+package search.ui.areas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+import org.eclipse.emf.search.ui.areas.AbstractModelSearchParticipantArea;
+import org.eclipse.emf.search.ui.pages.AbstractModelSearchPage;
+import org.eclipse.emf.search.ui.providers.AbstractMetaModelParticipantsItemProvider;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.emf.search.utils.ModelSearchImagesUtil;
+import java.net.URL;
+
+import search.ui.Activator;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
+
+import java.util.Collection;
+
+import search.util.TextualFeaturesUtils;
+
+import search.ui.providers.MetaModelParticipantsItemProvider;
+
+<% for (GenPackage p : genPackagesList) { %>
+import <%=p.getQualifiedItemProviderAdapterFactoryClassName()%>;
+<% } %> 
+
+<% for (GenPackage p : genPackagesList) { %>
+import <%=p.getQualifiedPackageInterfaceName()%>;
+<% } %> 
+
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.ENamedElement;
+import org.eclipse.emf.ecore.EObject;
+import java.util.Arrays;
+
+public final class ModelSearchParticipantArea extends AbstractModelSearchParticipantArea {
+
+	private String nsURI;
+	public ModelSearchParticipantArea(Composite parent, AbstractModelSearchPage page, int style) {
+		super(parent, page, style);
+		createContent();
+	}
+	
+	public ModelSearchParticipantArea(Composite parent, AbstractModelSearchPage page, int style, String nsURI) {
+		super(parent, page, style);
+		this.nsURI = nsURI;
+		createContent();
+	}
+	
+	@Override
+	protected boolean getDefaultParticpantsControlEnabling() {
+		return false;
+	}
+	
+	@Override
+	public List<AdapterFactory> getMetaElementComposeableAdapterFactories(String nsURI) {
+		return getMetaElementComposeableAdapterFactories();
+	}
+	@Override
+	public List<AdapterFactory> getMetaElementComposeableAdapterFactories() {
+		List<AdapterFactory> composeableAdapterFactories = new ArrayList<AdapterFactory>();
+		composeableAdapterFactories.add(new EcoreItemProviderAdapterFactory());
+		<% for (GenPackage p : genPackagesList) { %>
+		if (<%=p.getPackageInterfaceName()%>.eNS_URI.equals(nsURI)) {
+			composeableAdapterFactories.add(new <%=p.getItemProviderAdapterFactoryClassName()%>());
+		}	
+		<% } %>
+		if  (nsURI == null || "".equals(nsURI)) {
+			<% for (GenPackage p : genPackagesList) { %>
+			composeableAdapterFactories.add(new <%=p.getItemProviderAdapterFactoryClassName()%>());
+			<% } %>
+		}
+		composeableAdapterFactories.add(new ResourceItemProviderAdapterFactory());
+		return composeableAdapterFactories;
+	}
+	
+	@Override
+	public AbstractMetaModelParticipantsItemProvider getMetaModelParticipantsItemProvider() {
+		return new MetaModelParticipantsItemProvider(getTargetMetaModelIDs());
+	}
+	
+	@Override
+	protected Collection<EPackage> getTargetModelPackages() {
+		<% for (GenPackage p : genPackagesList) { %>
+		if (<%=p.getPackageInterfaceName()%>.eNS_URI.equals(nsURI)) {
+			return Arrays.asList(new EPackage[] { <%=p.getPackageInterfaceName()%>.eINSTANCE });
+		}
+		<% } %>
+		return Arrays.asList(new EPackage[] {
+		<% for (GenPackage p : genPackagesList) { %>
+	          <%=p.getPackageInterfaceName()%>.eINSTANCE<%=genPackagesList.indexOf(p)==genPackagesList.size()-1?"":","%>
+		<% } %>
+		});
+ 	}
+ 	
+ 	public Collection<String> getTargetMetaModelIDs() {
+		<% for (GenPackage p : genPackagesList) { %>
+		if (<%=p.getPackageInterfaceName()%>.eNS_URI.equals(nsURI)) {
+			return Arrays.asList(new String[] { nsURI }); 
+		}
+		<% } %>
+		return Arrays.asList(new String[] {
+		<% for (GenPackage p : genPackagesList) { %>
+	          <%=p.getPackageInterfaceName()%>.eNS_URI<%=genPackagesList.indexOf(p)==genPackagesList.size()-1?"":","%>
+		<% } %>
+		});
+ 	}
+	
+	@Override
+	protected String getTargetModelElementText(Object object) {
+		return object instanceof ENamedElement ? ((ENamedElement) object).getName() : null;
+	}
+	
+	@Override
+	protected Image getTargetModelElementImage(Object object) {
+		try {
+			if (object instanceof ENamedElement) {
+				String imagePath = "/icons/full/obj16/" + computeElementImageName(((ENamedElement)object).getName()) + ".gif"; //$NON-NLS-1$  //$NON-NLS-2$
+				URL url = FileLocator.find(<%=editPluginClass%>.getPlugin().getBundle(), new Path(imagePath), null);
+				if (url != null) {
+					return ModelSearchImagesUtil.getImage(url);
+				}
+			}
+		} catch (Throwable t) {
+			Activator.getDefault().getLog().log(new Status(Status.ERROR, Activator.PLUGIN_ID, "Error while attempmting to retrieve image from edit" + <%=editPluginClass%>.getPlugin().getBundle() + " bundle")); //$NON-NLS-1$  //$NON-NLS-2$
+		} 
+		return null;
+	}
+	
+	private String computeElementImageName(String name) {
+		return name;
+	}
+}

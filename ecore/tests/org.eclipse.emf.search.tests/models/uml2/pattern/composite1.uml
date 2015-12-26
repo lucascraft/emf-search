@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_uosZwJu_Ed2KB4Vc0cebmQ" name="Package">
+  <elementImport xmi:id="_uqyEcJu_Ed2KB4Vc0cebmQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_urOJUJu_Ed2KB4Vc0cebmQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_urOJUZu_Ed2KB4Vc0cebmQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_urOwYJu_Ed2KB4Vc0cebmQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vxa8YJu_Ed2KB4Vc0cebmQ" name="Class" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_x_2i0Ju_Ed2KB4Vc0cebmQ" name="Class1">
+    <generalization xmi:id="_zPZfIJu_Ed2KB4Vc0cebmQ" general="_vxa8YJu_Ed2KB4Vc0cebmQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yfIf0Ju_Ed2KB4Vc0cebmQ" name="Class2">
+    <generalization xmi:id="_0B220Ju_Ed2KB4Vc0cebmQ" general="_vxa8YJu_Ed2KB4Vc0cebmQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PlqxIJvAEd2_raVXYPPeNA" name="dkjf" memberEnd="_Plys8JvAEd2_raVXYPPeNA _PlzUApvAEd2_raVXYPPeNA">
+    <ownedEnd xmi:id="_Plys8JvAEd2_raVXYPPeNA" name="src" type="_yfIf0Ju_Ed2KB4Vc0cebmQ" association="_PlqxIJvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PlzUAZvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PlzUAJvAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_PlzUApvAEd2_raVXYPPeNA" name="dst" type="_vxa8YJu_Ed2KB4Vc0cebmQ" aggregation="shared" association="_PlqxIJvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PlzUBJvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PlzUA5vAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XaSkAJvAEd2_raVXYPPeNA" name="Copy_1_Class" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XaSkAZvAEd2_raVXYPPeNA" name="Copy_1_Class1">
+    <generalization xmi:id="_XaSkApvAEd2_raVXYPPeNA" general="_XaSkAJvAEd2_raVXYPPeNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XaTLEJvAEd2_raVXYPPeNA" name="Copy_1_Class2">
+    <generalization xmi:id="_XaTLEZvAEd2_raVXYPPeNA" general="_XaSkAJvAEd2_raVXYPPeNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XaTLEpvAEd2_raVXYPPeNA" name="Copy_1_dkjf" memberEnd="_XaTLE5vAEd2_raVXYPPeNA _XaTLFpvAEd2_raVXYPPeNA">
+    <ownedEnd xmi:id="_XaTLE5vAEd2_raVXYPPeNA" name="src" type="_XaTLEJvAEd2_raVXYPPeNA" association="_XaTLEpvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XaTLFJvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XaTLFZvAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_XaTLFpvAEd2_raVXYPPeNA" name="dst" type="_XaSkAJvAEd2_raVXYPPeNA" aggregation="shared" association="_XaTLEpvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XaTLF5vAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XaTLGJvAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZkDF5ZvAEd2_raVXYPPeNA" name="Copy_2_Class" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZkDF5pvAEd2_raVXYPPeNA" name="Copy_2_Class1">
+    <generalization xmi:id="_ZkDF55vAEd2_raVXYPPeNA" general="_ZkDF5ZvAEd2_raVXYPPeNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZkDF6JvAEd2_raVXYPPeNA" name="Copy_2_Class2">
+    <generalization xmi:id="_ZkDF6ZvAEd2_raVXYPPeNA" general="_ZkDF5ZvAEd2_raVXYPPeNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZkDs4JvAEd2_raVXYPPeNA" name="Copy_2_dkjf" memberEnd="_ZkDs4ZvAEd2_raVXYPPeNA _ZkDs5JvAEd2_raVXYPPeNA">
+    <ownedEnd xmi:id="_ZkDs4ZvAEd2_raVXYPPeNA" name="src" type="_ZkDF6JvAEd2_raVXYPPeNA" association="_ZkDs4JvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZkDs4pvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZkDs45vAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ZkDs5JvAEd2_raVXYPPeNA" name="dst" type="_ZkDF5ZvAEd2_raVXYPPeNA" aggregation="shared" association="_ZkDs4JvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZkDs5ZvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZkDs5pvAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bd9NwJvAEd2_raVXYPPeNA" name="Copy_3_Class" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bd9NwZvAEd2_raVXYPPeNA" name="Copy_3_Class1">
+    <generalization xmi:id="_bd9NwpvAEd2_raVXYPPeNA" general="_bd9NwJvAEd2_raVXYPPeNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bd9Nw5vAEd2_raVXYPPeNA" name="Copy_3_Class2">
+    <generalization xmi:id="_bd9NxJvAEd2_raVXYPPeNA" general="_bd9NwJvAEd2_raVXYPPeNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bd900JvAEd2_raVXYPPeNA" name="Copy_3_dkjf" memberEnd="_bd900ZvAEd2_raVXYPPeNA _bd901JvAEd2_raVXYPPeNA">
+    <ownedEnd xmi:id="_bd900ZvAEd2_raVXYPPeNA" name="src" type="_bd9Nw5vAEd2_raVXYPPeNA" association="_bd900JvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bd900pvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bd9005vAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_bd901JvAEd2_raVXYPPeNA" name="dst" type="_bd9NwJvAEd2_raVXYPPeNA" aggregation="shared" association="_bd900JvAEd2_raVXYPPeNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bd901ZvAEd2_raVXYPPeNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bd901pvAEd2_raVXYPPeNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Package>

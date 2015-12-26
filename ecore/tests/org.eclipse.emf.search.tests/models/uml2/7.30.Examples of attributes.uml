@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_vKSf8L20EduWjOs2RiriMw">
+  <elementImport xmi:id="_cgMJkL26EdukCPcSYjz9wg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_cgfEgL26EdukCPcSYjz9wg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_cgfEgb26EdukCPcSYjz9wg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_cgfEgr26EdukCPcSYjz9wg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_18zVkL20EduWjOs2RiriMw" name="ClassA">
+    <ownedAttribute xmi:id="_65Kh4L20EduWjOs2RiriMw" name="name" visibility="package" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_8kv58L20EduWjOs2RiriMw" name="shape" visibility="package" type="_NKXy8L22EduWjOs2RiriMw" aggregation="composite"/>
+    <ownedAttribute xmi:id="_Smc-wL_zEdukCPcSYjz9wg" name="size" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UfdHwL_zEdukCPcSYjz9wg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UfdHwb_zEdukCPcSYjz9wg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_xtSMgL_2EdukCPcSYjz9wg" name="area" visibility="package" isReadOnly="true" isDerived="true" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_BQifAL_3EdukCPcSYjz9wg" name="height" visibility="package" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_CM4ygL_3EdukCPcSYjz9wg" value="5"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_C8RoEL_3EdukCPcSYjz9wg" name="width" visibility="package" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NKXy8L22EduWjOs2RiriMw" name="Rectangle"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IX6xYL_3EdukCPcSYjz9wg" name="ClassB">
+    <generalization xmi:id="_YYQhIL_6EdukCPcSYjz9wg" general="_18zVkL20EduWjOs2RiriMw"/>
+    <ownedAttribute xmi:id="_K2UtgL_3EdukCPcSYjz9wg" name="id" visibility="package" aggregation="composite" redefinedProperty="_65Kh4L20EduWjOs2RiriMw">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_fkQ00L_6EdukCPcSYjz9wg" name="shape" visibility="package" type="_dlTNwL_6EdukCPcSYjz9wg" aggregation="composite" redefinedProperty="_8kv58L20EduWjOs2RiriMw"/>
+    <ownedAttribute xmi:id="_h8P_4L_6EdukCPcSYjz9wg" name="height" visibility="package" aggregation="composite" redefinedProperty="_BQifAL_3EdukCPcSYjz9wg">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_pLOvEL_6EdukCPcSYjz9wg" value="7"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_lVXQwL_6EdukCPcSYjz9wg" name="width" visibility="package" isDerived="true" aggregation="composite" redefinedProperty="_C8RoEL_3EdukCPcSYjz9wg">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_cx8PcMAAEdukCPcSYjz9wg" name="ClassSS" visibility="private"/>
+    <ownedOperation xmi:id="_bHsUIMAAEdukCPcSYjz9wg" name="operation" visibility="private">
+      <ownedParameter xmi:id="_cD42oMAAEdukCPcSYjz9wg" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_dlTNwL_6EdukCPcSYjz9wg" name="Square">
+    <generalization xmi:id="_FbzBsL_7EdukCPcSYjz9wg" general="_NKXy8L22EduWjOs2RiriMw"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_sTqXgLz4EduWjOs2RiriMw">
+  <packagedElement xmi:type="uml:Class" xmi:id="_4yHs8L2gEduWjOs2RiriMw" name="Window"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5sjU4L2gEduWjOs2RiriMw" name="Slider"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6iEAkL2gEduWjOs2RiriMw" name="Header"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7Xt2ML2gEduWjOs2RiriMw" name="Panel"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_81LSsL2gEduWjOs2RiriMw" memberEnd="_81LSsb2gEduWjOs2RiriMw _81LStL2gEduWjOs2RiriMw">
+    <ownedEnd xmi:id="_81LSsb2gEduWjOs2RiriMw" name="" type="_4yHs8L2gEduWjOs2RiriMw" aggregation="composite" association="_81LSsL2gEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JJEGML2hEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JJEGMb2hEduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_81LStL2gEduWjOs2RiriMw" name="scrollbar" type="_5sjU4L2gEduWjOs2RiriMw" association="_81LSsL2gEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E2D_8L2hEduWjOs2RiriMw" value="2"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E2D_8b2hEduWjOs2RiriMw" value="2"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-r91ML2gEduWjOs2RiriMw" memberEnd="_-r91Mb2gEduWjOs2RiriMw _-r91NL2gEduWjOs2RiriMw">
+    <ownedEnd xmi:id="_-r91Mb2gEduWjOs2RiriMw" name="src" type="_4yHs8L2gEduWjOs2RiriMw" aggregation="composite" association="_-r91ML2gEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-r91M72gEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-r91Mr2gEduWjOs2RiriMw" value="1"/>
+      <qualifier xmi:id="_Qz5q8L2hEduWjOs2RiriMw" name="" type="_4yHs8L2gEduWjOs2RiriMw" aggregation="composite">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qz5q8b2hEduWjOs2RiriMw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qz5q8r2hEduWjOs2RiriMw" value="1"/>
+      </qualifier>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-r91NL2gEduWjOs2RiriMw" name="title" type="_6iEAkL2gEduWjOs2RiriMw" association="_-r91ML2gEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GIMWML2hEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GIMWMb2hEduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__Td6EL2gEduWjOs2RiriMw" memberEnd="__Td6Eb2gEduWjOs2RiriMw __Td6FL2gEduWjOs2RiriMw">
+    <ownedEnd xmi:id="__Td6Eb2gEduWjOs2RiriMw" name="" type="_4yHs8L2gEduWjOs2RiriMw" aggregation="composite" association="__Td6EL2gEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__Td6E72gEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__Td6Er2gEduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="__Td6FL2gEduWjOs2RiriMw" name="body" type="_7Xt2ML2gEduWjOs2RiriMw" association="__Td6EL2gEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HTd2gL2hEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HTd2gb2hEduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

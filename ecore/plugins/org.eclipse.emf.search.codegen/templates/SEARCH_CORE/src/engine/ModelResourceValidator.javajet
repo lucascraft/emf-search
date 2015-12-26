@@ -1,0 +1,23 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.core.engine"
+	 imports="org.eclipse.emf.search.codegen.model.generator.* org.eclipse.emf.codegen.ecore.genmodel.*"
+	 class="ModelResourceValidator"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+%>
+package search.engine;
+
+import org.eclipse.emf.search.core.resource.AbstractModelResourceValidator;
+
+/**
+ * Allows users to describe all the specific query search supported model editor extensions.
+ */
+public class ModelResourceValidator extends AbstractModelResourceValidator {
+	public ModelResourceValidator() {
+		<% for (GenPackage p : settings.getGenModel().getGenPackages()) { %>
+		addModelFileExtension("<%=p.getPackageName().toLowerCase()%>"); //$NON-NLS-1$
+		<% } %>
+	}
+}
+

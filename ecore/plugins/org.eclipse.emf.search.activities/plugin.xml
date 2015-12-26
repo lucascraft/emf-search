@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+  Copyright (c) 2007, 2008 Anyware Technologies. All rights reserved. This program
+  and the accompanying materials are made available under the terms of the
+  Eclipse Public License v1.0 which accompanies this distribution, and is
+  available at http://www.eclipse.org/legal/epl-v10.html
+    
+  Contributors: Lucas Bigeardel (Anyware Technologies) - initial API and
+  implementation
+-->
+<plugin>
+   <extension
+         point="org.eclipse.ui.activities">
+      <category
+            description="%ModelingSearch.Category.Description"
+            id="org.eclipse.emf.categories.modeling.SearchCategory"
+            name="%ModelingSearch.Category.Label">
+      </category>
+      <activity
+            description="%EclipseModelingSearchFramework.Activity.Description"
+            id="org.eclipse.EMF.SEARCH"
+            name="%EclipseModelingSearchFramework.Activity.Label">
+      </activity>
+      <categoryActivityBinding
+            activityId="org.eclipse.EMF.SEARCH"
+            categoryId="org.eclipse.emf.categories.modeling.SearchCategory">
+      </categoryActivityBinding>
+      <activity
+            description="%ModelingSearchEcore.Activity.Description"
+            id="org.eclipse.EMF.SEARCH.ECORE"
+            name="%ModelingSearchEcore.Activity.Label">
+      </activity>
+      <categoryActivityBinding
+            activityId="org.eclipse.EMF.SEARCH.ECORE"
+            categoryId="org.eclipse.emf.categories.modeling.SearchCategory">
+      </categoryActivityBinding>
+      <activity
+            description="%ModelingSearchCodegen.Activity.Description"
+            id="org.eclipse.EMF.SEARCH.CODEGEN"
+            name="%ModelingSearchCodegen.Activity.Label">
+      </activity>
+      <categoryActivityBinding
+            activityId="org.eclipse.EMF.SEARCH.CODEGEN"
+            categoryId="org.eclipse.emf.categories.modeling.SearchCategory">
+      </categoryActivityBinding>
+      <activity
+            description="%ModelingSearchCommon.Activity.Description"
+            id="org.eclipse.EMF.SEARCH.COMMONN"
+            name="%ModelingSearchCommon.Activity.Label">
+      </activity>
+      <categoryActivityBinding
+            activityId="org.eclipse.EMF.SEARCH.COMMON"
+            categoryId="org.eclipse.emf.categories.modeling.SearchCategory">
+      </categoryActivityBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH"
+            pattern="org\.eclipse\.emf\.search">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH"
+            pattern="org\.eclipse\.emf\.search\.ui">
+      </activityPatternBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH.ECORE"
+            pattern="org\.eclipse\.emf\.search\.ecore">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH.ECORE"
+            pattern="org\.eclipse\.emf\.search\.ecore\.ui">
+      </activityPatternBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH.CODEGEN"
+            pattern="org\.eclipse\.emf\.search\.codegen">
+      </activityPatternBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH.COMMON"
+            pattern="org\.eclipse\.emf\.search\.common">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="org.eclipse.EMF.SEARCH.COMMON"
+            pattern="org\.eclipse\.emf\.search\.common\.ui">
+      </activityPatternBinding>
+   </extension>
+</plugin>

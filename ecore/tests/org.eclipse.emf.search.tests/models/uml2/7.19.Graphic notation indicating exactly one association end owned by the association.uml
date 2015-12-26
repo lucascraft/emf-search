@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_J_plsLw9EduWjOs2RiriMw">
+  <packagedElement xmi:type="uml:Class" xmi:id="_L5sQgLw9EduWjOs2RiriMw" name="A"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MoCkQLw9EduWjOs2RiriMw" name="B"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TMa3QLw9EduWjOs2RiriMw" name="BinaryAssociationAB" memberEnd="_TMa3Qbw9EduWjOs2RiriMw _TMkoQrw9EduWjOs2RiriMw" navigableOwnedEnd="_TMa3Qbw9EduWjOs2RiriMw">
+    <ownedEnd xmi:id="_TMa3Qbw9EduWjOs2RiriMw" name="endB" type="_MoCkQLw9EduWjOs2RiriMw" association="_TMa3QLw9EduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMkoQbw9EduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMkoQLw9EduWjOs2RiriMw" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_IFg-0Lw-EduWjOs2RiriMw" value=""/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_TMkoQrw9EduWjOs2RiriMw" name="endA" type="_L5sQgLw9EduWjOs2RiriMw" association="_TMa3QLw9EduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMkoRLw9EduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMkoQ7w9EduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

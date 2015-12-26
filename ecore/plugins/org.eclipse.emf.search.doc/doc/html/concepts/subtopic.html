@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Sub Topic</title>
+</head>
+
+<body>
+<h1>EMF, ECore & Meta Model</h1>
+<p>
+EMF (Eclipse Modeling Framework) requires two differents operations in order to obtain "ready to use" Java based Ecore models :
+
+<ul>
+<li>Ecore Modeling
+<li>Code Generation 
+</ul>
+
+These two steps will be iterated as time as needed in order to refine Ecore model according to user requirements.
+</p>
+
+<p>
+<b>Ecore modeling</b> is associated to .ecore files. <b>".ecore"</b> files contains the user model description compliant with <a href="EMOF.html">EMOF</a> metamodel.
+</P>
+
+<p>
+<b>Code Generation</b> is associated to .genmodel files.  <b>".genmodel"</b> files contains the configuration needed to drive model code generation.
+</P>
+
+<p>
+As a result of code generation, we obtain one to three different plugins :
+
+<ol>
+<li> Model
+<li> Edit
+<li> Editor
+</ol>
+
+These three differents parts comes from the fact model based development is strongly linked to separation of concerns. This means that each part contains separated functionalities, each part respectively being dependant of the precedent one ([3. Editor] depends on [2. Edit] depending on [1. Model]).
+</p>
+<BR>
+
+<img src="../pictures/DesignEMFArchitecturalOverview.png" title="EMF Model generation"><img/>
+
+
+<h1>EMF Ecore Based Search</h1>
+<p>
+Given the fact Ecore models are all compliant with <a href="EMOF.html">EMOF</a> metamodel, <a href="EMOF.html">EMOF</a> metamodel based computations are subsequently applicable to all Ecore models.
+</p>
+
+<p>
+This means that basics operations such as visiting, querying, comparing or refactoring based on <a href="EMOF.html">EMOF</a> metamodel still remain valid on Ecore models.
+</p>
+
+<p>
+EMF Search is a actually a metamodel beased search valid on any Ecore model. 
+</p>
+
+<p>
+Another cool aspect of the situation is that <a href="EMOF.html">EMOF</a> based search can be specialized for a any user defined Ecore model. 
+This means that we can actually specialize the search operation according to a particular Ecore model.
+</p>
+<BR>
+<!--
+<h1>EMF Search Overview</h1>
+<img src="../pictures/DesignEMFSearchPlusUMLAndXYZCodegen.png" title="EMF Search Global Overview"><img/>
+-->
+
+<h1>EMF Search Integration Overview</h1>
+
+<p>
+EMF Search is an integration to Eclipse Platform Search framework for modeling context. 
+</p>
+
+<p>
+This Search integration contributes either a Search Page tab and a Search Result View page. This is done by extending org.eclipse.search.searchPages & org.eclipse.search.searchResultViewPages.
+</p>
+
+<BR>
+
+
+<img src="../pictures/DesignEMFSearch.png" title="EMF Ecore based search framework architecture"><img/>
+
+<!--
+
+<img src="../pictures/ModelSearchExamples.png" title="EMF Search Global Overview"><img/>
+-->
+<!--
+<h1>UML2 Search Generation Basics</h1>
+<img src="../pictures/UML2ModelSearchCodegenOnly.png" title="UML2 Search Generation Basics"><img/>
+-->
+<!--
+<h1>UML2 Search Generation Specifics</h1>
+<img src="../pictures/UML2ModelSearchCodegenWithAdapter.png" title="UML2 Search Generation Specifics"><img/>
+-->
+<!--
+<h1>XYZ Search Generation Basics</h1>
+<img src="../pictures/XYZModelSearchCodegenOnly.png" title="XYZ Search Generation Basics"><img/>
+-->
+
+<h1>EMF Search Generation Specifics</h1>
+
+<p>
+EMF Search code generation takes advantage of the Ecore generation framework. Search code generation is triggered everytime a model, edit, editor are generated.
+</p>
+
+<p>
+This is done by contributing a Search GenAdapter to org.eclipse.emf.codegen.ecore.generatorAdapters extension point. as a result EMF Searh generation can be considered as a natural addition to user model.
+</p>
+
+<BR>
+
+<img src="../pictures/XYZModelSearchCodegenWithAdapter.png" title="XYZ Search Generation Specifics"><img/>
+
+</body>
+</html>

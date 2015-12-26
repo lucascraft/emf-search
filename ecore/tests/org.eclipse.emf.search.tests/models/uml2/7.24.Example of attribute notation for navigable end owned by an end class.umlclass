@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_b7GfkLz2EduWjOs2RiriMw" type="UMLClass" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_jf9_MLz2EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_jgHwMLz2EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_V4lyMAJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_jgHwMbz2EduWjOs2RiriMw" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_lREJYLz2EduWjOs2RiriMw" type="3001">
+        <element xmi:type="uml:Property" href="7.24.Example%20of%20attribute%20notation%20for%20navigable%20end%20owned%20by%20an%20end%20class.uml#_lQ6YYLz2EduWjOs2RiriMw"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lREJYbz2EduWjOs2RiriMw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_jgHwMrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_jgHwM7z2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_jgHwNLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_jgHwNbz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_jgHwNrz2EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_jgHwN7z2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_jgHwOLz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_jgHwObz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_jgHwOrz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_jgHwO7z2EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_jgHwPLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_jgHwPbz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_jgHwPrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_jgHwP7z2EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_jf9_Mbz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_jf9_Mrz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_jf9_M7z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_jf9_NLz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.24.Example%20of%20attribute%20notation%20for%20navigable%20end%20owned%20by%20an%20end%20class.uml#_jf0OMLz2EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jf9_Nbz2EduWjOs2RiriMw" x="54" y="41"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_kHc18Lz2EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_kHmm8Lz2EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_V4lyMQJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_kHmm8bz2EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_kHmm8rz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_kHmm87z2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kHmm9Lz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kHmm9bz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_kHmm9rz2EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_kHmm97z2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_kHmm-Lz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kHmm-bz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kHmm-rz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_kHmm-7z2EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_kHmm_Lz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_kHmm_bz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kHmm_rz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kHmm_7z2EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_kHc18bz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_kHc18rz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_kHc187z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_kHc19Lz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.24.Example%20of%20attribute%20notation%20for%20navigable%20end%20owned%20by%20an%20end%20class.uml#_kHTsALz2EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kHc19bz2EduWjOs2RiriMw" x="217" y="41"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_pWbcQLz2EduWjOs2RiriMw" type="Text">
+    <children xmi:type="notation:Node" xmi:id="_pWbcQ7z2EduWjOs2RiriMw" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pWbcRLz2EduWjOs2RiriMw" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_pWbcQbz2EduWjOs2RiriMw" description="7.24 - Example of attribute notation for navigable end owned by an end class&#xD;&#xA;"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pWbcQrz2EduWjOs2RiriMw" x="51" y="148"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nd80L2sEduWjOs2RiriMw" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_2nd8072sEduWjOs2RiriMw" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nd81L2sEduWjOs2RiriMw" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nd80b2sEduWjOs2RiriMw" description="Association ends still aren't differed by navigability" fillColor="255" lineColor="6737151"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nd80r2sEduWjOs2RiriMw" x="60" y="204" width="253" height="121"/>
+  </children>
+  <styles xmi:type="notation:PageStyle" xmi:id="_b7Gfkbz2EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:GuideStyle" xmi:id="_b7Gfkrz2EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:DescriptionStyle" xmi:id="_b7Gfk7z2EduWjOs2RiriMw"/>
+  <element xmi:type="uml:Model" href="7.24.Example%20of%20attribute%20notation%20for%20navigable%20end%20owned%20by%20an%20end%20class.uml#_ZHP34Lz2EduWjOs2RiriMw"/>
+</notation:Diagram>

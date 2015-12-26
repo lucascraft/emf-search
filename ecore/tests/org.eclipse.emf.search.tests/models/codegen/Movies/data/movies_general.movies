@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies:MoviesDB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:movies="http://www.eclipse.org/emf/search/test/models/movies/movies/1.0.0" comment="General movies' data base">
+  <movies title="Pulp Fiction" director="Quentin Tarantino" summary="The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits &#xD;&#xA;intertwine in four tales of violence and redemption.">
+    <copies id="1" place="//@places.1"/>
+    <copies id="2" place="//@places.1"/>
+    <copies id="3" place="//@places.1"/>
+    <copies id="4" place="//@places.1"/>
+  </movies>
+  <movies title="Casablanka" director="Michael Curtiz" genre="Drama" summary="Classic film set in unoccupied Africa during the early days of World War II:&#xD;&#xA;An American expatriate meets a former lover, with unforeseen complications.">
+    <copies id="1" place="//@places.0"/>
+    <copies id="2" place="//@places.0"/>
+  </movies>
+  <places id="ROOM_1" name="Room N1"/>
+  <places id="ROOM_2" name="Room N2"/>
+  <places id="ROOM_3" name="Room N3"/>
+  <places id="ROOM_4" name="Room N4"/>
+  <places id="ROOM_5" name="Room N5"/>
+</movies:MoviesDB>

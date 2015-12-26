@@ -1,0 +1,33 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.core.util"
+	 imports="org.eclipse.emf.search.codegen.model.generator.* org.eclipse.emf.codegen.ecore.genmodel.*"
+	 class="ModelSearchScopeFileSystemVisitor"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+%>
+package search.util;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.search.core.scope.IModelSearchScope;
+import org.eclipse.emf.search.ecore.scope.file.EcoreModelSearchScopeFileSystemVisitor;
+import java.io.File;
+
+public class ModelSearchScopeFileSystemVisitor extends
+		EcoreModelSearchScopeFileSystemVisitor {
+
+	public ModelSearchScopeFileSystemVisitor(
+			IModelSearchScope<Object, Resource> scope, String engineID) {
+		super(scope,  engineID);
+	}
+	protected boolean isParticipantCurrentSearchEngineValid(File f) {
+		if (f instanceof File && f.canRead() && f.exists() && ! f.isHidden()) {
+			<% for (GenPackage p : settings.getGenModel().getGenPackages()) { %>
+			if (f.getName().endsWith(".<%=p.getPackageName().toLowerCase()%>")) { //$NON-NLS-1$
+					return true;
+			}
+			<% } %>
+		} 
+		return false;
+	}
+}

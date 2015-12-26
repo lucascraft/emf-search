@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <!--
+   Model Search Popup Contributions
+   -->
+   <extension
+         point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+      <contributionItemProvider
+            checkPluginLoaded="false"
+            class="org.eclipse.emf.ecoretools.diagram.search.providers.EcoreDiagramSearchContributionItemProvider">
+         <Priority
+               name="Medium">
+         </Priority>
+         <popupContribution class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria
+                  objectClass="org.eclipse.emf.ecoretools.diagram.edit.parts.EClassEditPart"/>
+            <popupStructuredContributionCriteria
+                  objectClass="org.eclipse.emf.ecoretools.diagram.edit.parts.EClass2EditPart"/>
+            <popupStructuredContributionCriteria
+                  objectClass="org.eclipse.emf.ecoretools.diagram.edit.parts.EClassESuperTypesEditPart"/>
+            <popupMenuGroup
+                  id="EcoreSearch"
+                  path="/"
+                  separator="true">
+            </popupMenuGroup>
+            <popupAction path="/EcoreSearch" id="ereferencesAction"/>
+            <popupAction path="/EcoreSearch" id="ehierarchyAction"/>
+         </popupContribution>
+      </contributionItemProvider>
+   </extension>
+   <extension
+         point="org.eclipse.emf.search.ui.openDiagramParticipants">
+      <diagramParticipant
+            id="http://www.eclipse.org/emf/2002/Ecore"
+            openDiagramHandler="org.eclipse.emf.ecoretools.diagram.search.handlers.OpenEcoreDiagramHandler">
+      </diagramParticipant>
+   </extension>
+</plugin>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_VX0MQLxHEduWjOs2RiriMw">
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y1ZtcLxHEduWjOs2RiriMw" name="Year"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Zh9RcLxHEduWjOs2RiriMw" name="Team"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aWaNMLxHEduWjOs2RiriMw" name="Player"/>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_boYLYLxHEduWjOs2RiriMw" name="AssociationClass" memberEnd="_loj24LxHEduWjOs2RiriMw _mQ8FgLxHEduWjOs2RiriMw _mx3oULxHEduWjOs2RiriMw">
+    <ownedEnd xmi:id="_mQ8FgLxHEduWjOs2RiriMw" name="team" type="_Zh9RcLxHEduWjOs2RiriMw" association="_boYLYLxHEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zwgB8LxHEduWjOs2RiriMw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_loj24LxHEduWjOs2RiriMw" name="season" type="_Y1ZtcLxHEduWjOs2RiriMw" association="_boYLYLxHEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6DJrwLxHEduWjOs2RiriMw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_mx3oULxHEduWjOs2RiriMw" name="goalie" type="_aWaNMLxHEduWjOs2RiriMw" association="_boYLYLxHEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_waqHgLxHEduWjOs2RiriMw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_noRE0LxHEduWjOs2RiriMw" name="PlayedInYear" memberEnd="_noRE0bxHEduWjOs2RiriMw _noRE1LxHEduWjOs2RiriMw">
+    <ownedEnd xmi:id="_noRE0bxHEduWjOs2RiriMw" name="src" type="_aWaNMLxHEduWjOs2RiriMw" association="_noRE0LxHEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_noRE07xHEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_noRE0rxHEduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_noRE1LxHEduWjOs2RiriMw" name="dst" type="_Y1ZtcLxHEduWjOs2RiriMw" association="_noRE0LxHEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_noRE1rxHEduWjOs2RiriMw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_noRE1bxHEduWjOs2RiriMw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

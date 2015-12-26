@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_LQHvELw9EduWjOs2RiriMw" type="UMLClass" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_L5_ygLw9EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_L5_yhrw9EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_NZI5oAJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_L5_yh7w9EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_L5_yiLw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_L5_yibw9EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_L5_yirw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_L5_yi7w9EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_L5_yjLw9EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_L5_yjbw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_L5_yjrw9EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_L5_yj7w9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_L5_ykLw9EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_L5_ykbw9EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_L5_ykrw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_L5_yk7w9EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_L5_ylLw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_L5_ylbw9EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_L5_ygbw9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_L5_ygrw9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_L5_yg7w9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_L5_yhLw9EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.19.Graphic%20notation%20indicating%20exactly%20one%20association%20end%20owned%20by%20the%20association.uml#_L5sQgLw9EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L5_yhbw9EduWjOs2RiriMw" x="61" y="87"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_MoLuMLw9EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_MoLuNrw9EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_NZI5oQJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_MoLuN7w9EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_MoLuOLw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_MoLuObw9EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_MoLuOrw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_MoLuO7w9EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_MoLuPLw9EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_MoLuPbw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_MoLuPrw9EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_MoLuP7w9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_MoLuQLw9EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_MoLuQbw9EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_MoLuQrw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_MoLuQ7w9EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_MoLuRLw9EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_MoLuRbw9EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_MoLuMbw9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_MoLuMrw9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_MoLuM7w9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_MoLuNLw9EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.19.Graphic%20notation%20indicating%20exactly%20one%20association%20end%20owned%20by%20the%20association.uml#_MoCkQLw9EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MoLuNbw9EduWjOs2RiriMw" x="315" y="86"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_FHi_kLxDEduWjOs2RiriMw" type="Text">
+    <children xmi:type="notation:Node" xmi:id="_FHswkLxDEduWjOs2RiriMw" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_FHswkbxDEduWjOs2RiriMw" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_FHi_kbxDEduWjOs2RiriMw" description="Figure 7.19 - Graphic notation indicating exactly one association end owned by the association"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FHi_krxDEduWjOs2RiriMw" x="12" y="180"/>
+  </children>
+  <styles xmi:type="notation:PageStyle" xmi:id="_LQHvEbw9EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:GuideStyle" xmi:id="_LQHvErw9EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:DescriptionStyle" xmi:id="_LQHvE7w9EduWjOs2RiriMw"/>
+  <element xmi:type="uml:Model" href="7.19.Graphic%20notation%20indicating%20exactly%20one%20association%20end%20owned%20by%20the%20association.uml#_J_plsLw9EduWjOs2RiriMw"/>
+  <edges xmi:type="notation:Edge" xmi:id="_TMkoRbw9EduWjOs2RiriMw" type="4005" source="_MoLuMLw9EduWjOs2RiriMw" target="_L5_ygLw9EduWjOs2RiriMw">
+    <children xmi:type="notation:Node" xmi:id="_TMkoSbw9EduWjOs2RiriMw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoSrw9EduWjOs2RiriMw" y="20"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TMkoS7w9EduWjOs2RiriMw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoTLw9EduWjOs2RiriMw" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TMkoTbw9EduWjOs2RiriMw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoTrw9EduWjOs2RiriMw" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TMkoT7w9EduWjOs2RiriMw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoULw9EduWjOs2RiriMw" y="-30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TMkoUbw9EduWjOs2RiriMw" type="6007">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoUrw9EduWjOs2RiriMw" y="-30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TMkoU7w9EduWjOs2RiriMw" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoVLw9EduWjOs2RiriMw" y="15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TMkoVbw9EduWjOs2RiriMw" type="6009">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TMkoVrw9EduWjOs2RiriMw" y="15"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_TMkoRrw9EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TMkoR7w9EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Association" href="7.19.Graphic%20notation%20indicating%20exactly%20one%20association%20end%20owned%20by%20the%20association.uml#_TMa3QLw9EduWjOs2RiriMw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TMkoSLw9EduWjOs2RiriMw" points="[-10, 4, 164, 0]$[-164, -2, 10, -6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TMkoV7w9EduWjOs2RiriMw" id="(0.1,0.09375)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TMkoWLw9EduWjOs2RiriMw" id="(0.9,0.140625)"/>
+  </edges>
+</notation:Diagram>

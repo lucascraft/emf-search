@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_2VvLULz2EduWjOs2RiriMw" type="UMLClass" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_28fCQLz2EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_28fCRrz2EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_W2IYgAJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_28fCR7z2EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_28fCSLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_28fCSbz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_28fCSrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_28fCS7z2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_28fCTLz2EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_28fCTbz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_28fCTrz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_28fCT7z2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_28fCULz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_28fCUbz2EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_28fCUrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_28fCU7z2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_28fCVLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_28fCVbz2EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_28fCQbz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_28fCQrz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_28fCQ7z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_28fCRLz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.25.Derived%20supersets%20(union).uml#_28VRQLz2EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_28fCRbz2EduWjOs2RiriMw" x="52" y="43"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_3pyNILz2EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_3pyNJrz2EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_W2IYgQJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_3pyNJ7z2EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_3pyNKLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_3pyNKbz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_3pyNKrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_3pyNK7z2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_3pyNLLz2EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_3pyNLbz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_3pyNLrz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_3pyNL7z2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_3pyNMLz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_3pyNMbz2EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_3pyNMrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_3pyNM7z2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_3pyNNLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_3pyNNbz2EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3pyNIbz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_3pyNIrz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_3pyNI7z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_3pyNJLz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.25.Derived%20supersets%20(union).uml#_3pocILz2EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3pyNJbz2EduWjOs2RiriMw" x="311" y="48"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_4eOh0Lz2EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_4eOh1rz2EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_W2IYggJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_4eOh17z2EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_4eOh2Lz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_4eOh2bz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_4eOh2rz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_4eOh27z2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_4eOh3Lz2EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_4eOh3bz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_4eOh3rz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_4eOh37z2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_4eOh4Lz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_4eOh4bz2EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_4eOh4rz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_4eOh47z2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_4eOh5Lz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_4eOh5bz2EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_4eOh0bz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_4eOh0rz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_4eOh07z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_4eOh1Lz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.25.Derived%20supersets%20(union).uml#_4eFX4Lz2EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4eOh1bz2EduWjOs2RiriMw" x="56" y="171"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_5P2MALz2EduWjOs2RiriMw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_5P2MBrz2EduWjOs2RiriMw" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_W2IYgwJpEd2u-ZCR6SejNA" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_5P2MB7z2EduWjOs2RiriMw" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_5P2MCLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5P2MCbz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5P2MCrz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5P2MC7z2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_5P2MDLz2EduWjOs2RiriMw" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_5P2MDbz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5P2MDrz2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5P2MD7z2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5P2MELz2EduWjOs2RiriMw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_5P2MEbz2EduWjOs2RiriMw" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_5P2MErz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5P2ME7z2EduWjOs2RiriMw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5P2MFLz2EduWjOs2RiriMw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5P2MFbz2EduWjOs2RiriMw"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_5P2MAbz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_5P2MArz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_5P2MA7z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_5P2MBLz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Class" href="7.25.Derived%20supersets%20(union).uml#_5PtCELz2EduWjOs2RiriMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5P2MBbz2EduWjOs2RiriMw" x="309" y="173"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_gx7ZsLz4EduWjOs2RiriMw" type="Text">
+    <children xmi:type="notation:Node" xmi:id="_gx7Zs7z4EduWjOs2RiriMw" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gx7ZtLz4EduWjOs2RiriMw" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_gx7Zsbz4EduWjOs2RiriMw" description="Figure 7.25 - Derived supersets (union)"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gx7Zsrz4EduWjOs2RiriMw" x="98" y="285"/>
+  </children>
+  <styles xmi:type="notation:PageStyle" xmi:id="_2VvLUbz2EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:GuideStyle" xmi:id="_2VvLUrz2EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:DescriptionStyle" xmi:id="_2VvLU7z2EduWjOs2RiriMw"/>
+  <element xmi:type="uml:Model" href="7.25.Derived%20supersets%20(union).uml#_020WQLz2EduWjOs2RiriMw"/>
+  <edges xmi:type="notation:Edge" xmi:id="_62qY0bz2EduWjOs2RiriMw" type="4001" source="_4eOh0Lz2EduWjOs2RiriMw" target="_28fCQLz2EduWjOs2RiriMw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_62qY0rz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_62qY07z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_62qY1Lz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Generalization" href="7.25.Derived%20supersets%20(union).uml#_62qY0Lz2EduWjOs2RiriMw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_62qY1bz2EduWjOs2RiriMw" points="[7, -5, 0, 118]$[4, -133, -3, -10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_620J0Lz2EduWjOs2RiriMw" id="(0.32,0.078125)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_620J0bz2EduWjOs2RiriMw" id="(0.43,0.15625)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_7rkAgbz2EduWjOs2RiriMw" type="4001" source="_5P2MALz2EduWjOs2RiriMw" target="_3pyNILz2EduWjOs2RiriMw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_7rkAgrz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_7rkAg7z2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_7rkAhLz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Generalization" href="7.25.Derived%20supersets%20(union).uml#_7rkAgLz2EduWjOs2RiriMw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7rkAhbz2EduWjOs2RiriMw" points="[-4, -6, 0, 121]$[-5, -131, -1, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7rtxgLz2EduWjOs2RiriMw" id="(0.51,0.09375)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7rtxgbz2EduWjOs2RiriMw" id="(0.45,0.0625)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_8dLqsLz2EduWjOs2RiriMw" type="4005" source="_28fCQLz2EduWjOs2RiriMw" target="_3pyNILz2EduWjOs2RiriMw">
+    <children xmi:type="notation:Node" xmi:id="_8dLqtLz2EduWjOs2RiriMw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqtbz2EduWjOs2RiriMw" y="20"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8dLqtrz2EduWjOs2RiriMw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqt7z2EduWjOs2RiriMw" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8dLquLz2EduWjOs2RiriMw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqubz2EduWjOs2RiriMw" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8dLqurz2EduWjOs2RiriMw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqu7z2EduWjOs2RiriMw" y="-30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8dLqvLz2EduWjOs2RiriMw" type="6007">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqvbz2EduWjOs2RiriMw" y="-30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8dLqvrz2EduWjOs2RiriMw" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqv7z2EduWjOs2RiriMw" y="15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8dLqwLz2EduWjOs2RiriMw" type="6009">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8dLqwbz2EduWjOs2RiriMw" y="15"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_8dLqsbz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8dLqsrz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Association" href="7.25.Derived%20supersets%20(union).uml#_8dB5sLz2EduWjOs2RiriMw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8dLqs7z2EduWjOs2RiriMw" points="[12, 1, -169, 0]$[171, -5, -10, -6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8dLqwrz2EduWjOs2RiriMw" id="(0.88,0.1875)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8dLqw7z2EduWjOs2RiriMw" id="(0.1,0.125)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_88VE17z2EduWjOs2RiriMw" type="4005" source="_4eOh0Lz2EduWjOs2RiriMw" target="_5P2MALz2EduWjOs2RiriMw">
+    <children xmi:type="notation:Node" xmi:id="_88n_wLz2EduWjOs2RiriMw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_wbz2EduWjOs2RiriMw" y="20"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_88n_wrz2EduWjOs2RiriMw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_w7z2EduWjOs2RiriMw" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_88n_xLz2EduWjOs2RiriMw" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_xbz2EduWjOs2RiriMw" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_88n_xrz2EduWjOs2RiriMw" type="6006">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_x7z2EduWjOs2RiriMw" y="-30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_88n_yLz2EduWjOs2RiriMw" type="6007">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_ybz2EduWjOs2RiriMw" y="-30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_88n_yrz2EduWjOs2RiriMw" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_y7z2EduWjOs2RiriMw" y="15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_88n_zLz2EduWjOs2RiriMw" type="6009">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88n_zbz2EduWjOs2RiriMw" y="15"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_88VE2Lz2EduWjOs2RiriMw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_88VE2bz2EduWjOs2RiriMw"/>
+    <element xmi:type="uml:Association" href="7.25.Derived%20supersets%20(union).uml#_88VE0Lz2EduWjOs2RiriMw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_88VE2rz2EduWjOs2RiriMw" points="[13, 5, -166, 0]$[166, -2, -13, -7]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_88xJsLz2EduWjOs2RiriMw" id="(0.87,0.125)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_88xJsbz2EduWjOs2RiriMw" id="(0.13,0.171875)"/>
+  </edges>
+</notation:Diagram>

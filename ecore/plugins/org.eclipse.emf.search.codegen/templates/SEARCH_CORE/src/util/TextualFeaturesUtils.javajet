@@ -1,0 +1,180 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.core.utils"
+	 imports="java.util.List org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.emf.search.codegen.model.generator.*  java.util.ArrayList java.util.List java.util.HashMap java.util.Map org.eclipse.emf.ecore.EObject"
+	 class="TextualFeaturesUtils"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	List<EStringAccessor> genTypeParameter = settings.getTextualSettings().getEStringAccessors();
+	String basePackage = settings.getGenModel().getModelPluginPackageName();
+	List<GenPackage> genPackagesList = settings.getGenModel().getGenPackages();
+	String modelName = settings.getGenModel().getModelName();
+%>
+package search.util;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.ETypedElement;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.search.core.engine.IModelSearchQuery;
+
+<%
+// 
+// Refines package names to only get unique ones
+//
+List<String> uniquePkgList = new ArrayList<String>();
+for (EStringAccessor element : genTypeParameter) { 
+    String pName = element.getGenPackage().getQualifiedPackageInterfaceName();
+    if(!uniquePkgList.contains(pName)) {
+        uniquePkgList.add(pName);
+    }
+}
+%>
+<%
+for (String pkgName : uniquePkgList) {
+%>
+import <%=pkgName%>;
+<% } %>
+
+public class TextualFeaturesUtils  {
+		
+	public TextualFeaturesUtils() {
+	}
+	
+	private static TextualFeaturesUtils instance;
+	
+	public static TextualFeaturesUtils instance() {
+		return instance == null ? instance = new TextualFeaturesUtils() : instance;
+	}
+	
+		<%
+		Map<GenPackage, List<String>> literalsForPackageMap = new HashMap<GenPackage, List<String>>();
+		for (GenPackage p : genPackagesList) {
+			literalsForPackageMap.put(p, new ArrayList<String>());
+			for  (EStringAccessor element : genTypeParameter) { 
+                String literal = element.getLiteral();
+				if (literal.startsWith(p.getPackageInterfaceName())) {
+					literalsForPackageMap.get(p).add(literal);
+				}
+			}
+		}
+	%>
+
+	public List<ETypedElement> getParticipantTextualTypedElement() {
+		List<ETypedElement> list = new ArrayList<ETypedElement>();
+		<% for (GenPackage p : genPackagesList) { %>
+			list.addAll(get<%=p.getPackageInterfaceName()%>ParticipantTextualTypedElement());
+		<% } %>
+		return list;
+	}
+	
+	<% for (GenPackage p : genPackagesList) { %>
+	public List<ETypedElement> get<%=p.getPackageInterfaceName()%>ParticipantTextualTypedElement() {
+		return Arrays.asList(
+			new ETypedElement[] {
+	            <% for (String literal : literalsForPackageMap.get(p)) { %>
+                    <%=literal%><%=literalsForPackageMap.get(p).indexOf(literal)==literalsForPackageMap.get(p).size()-1?"":","%>
+                <% } %>
+			}
+		);
+	}
+	<% } %>
+
+
+    public List<ETypedElement> getOwnedETypedElementsFromEObject(EObject obj) {
+        List<ETypedElement> list = new ArrayList<ETypedElement>();
+        for (ETypedElement e : getParticipantTextualTypedElement()) {
+            if (e instanceof EAttribute) {
+                try {
+                    String val = getTextFromETypedElement(obj, e);
+                    if (val instanceof String) {
+                        list.add(e);
+                    }
+                } catch (Throwable t) {
+                    //ugly
+                }
+            }
+        }
+        return list;
+    }
+
+    public String getTextFromETypedElement(EObject obj, ETypedElement elem) {
+        if (elem instanceof EAttribute) {
+            return EcoreUtil.convertToString(((EAttribute) elem)
+                    .getEAttributeType(), obj.eGet((EStructuralFeature) elem));
+        }
+        return null;
+    }
+
+    public String getTextFromEStructuralFeatureIfAny(EObject obj) {
+        List<ETypedElement> lst = getOwnedETypedElementsFromEObject(obj);
+        if (!lst.isEmpty()) {
+            ETypedElement elem = lst.get(0);
+            if (elem instanceof EAttribute) {
+                return EcoreUtil.convertToString(((EAttribute) elem)
+                        .getEAttributeType(), obj
+                        .eGet((EStructuralFeature) elem));
+            }
+        }
+        return null;
+    }
+
+    public void setTextForEStructuralFeatureIfAny(EObject obj, Object val) {
+        for (ETypedElement e : getParticipantTextualTypedElement()) {
+            if (e instanceof EAttribute) {
+                try {
+                    if (val instanceof String) {
+                        Object valuation = EcoreUtil.createFromString(
+                                ((EAttribute) e).getEAttributeType(),
+                                (String) val);
+                        if (valuation != null) {
+                            obj.eSet((EStructuralFeature) e, valuation);
+                        }
+                    }
+                } catch (Throwable ex) {
+                    //TODO: User to handle exception in an elegant way
+                }
+            }
+        }
+    }
+
+    public void setTextForETypedElement(EObject obj, ETypedElement e, Object val) {
+        if (e instanceof EAttribute) {
+            try {
+                if (val instanceof String) {
+                    Object valuation = EcoreUtil.createFromString(
+                            ((EAttribute) e).getEAttributeType(), (String) val);
+                    if (valuation != null) {
+                        obj.eSet((EStructuralFeature) e, valuation);
+                    }
+                }
+            } catch (Throwable ex) {
+                //TODO: User to handle exception in an elegant way
+            }
+        }
+    }
+    
+    //
+    // Get EStructuralFeature subset coming from query selection 
+    //
+    public List<EStructuralFeature> getEStructuralFeaturesFromQueryAndEObject(EObject eObj, IModelSearchQuery query) {
+        List<EStructuralFeature> lst = new ArrayList<EStructuralFeature>();
+        for (EStructuralFeature f : query.getModelSearchParameters().getEStructuralFeatures()) {
+            if (eObj instanceof EObject) {
+                if (eObj.eClass().getEAttributes().contains(f)) {
+                    lst.add(f);
+                }
+            }
+        }
+        if (lst.isEmpty()) {
+            lst.add(((EClass) eObj).getEIDAttribute());
+        }
+        return lst;
+    }
+}

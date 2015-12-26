@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers:CustomersDB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:customers="http://www.eclipse.org/emf/search/test/models/movies/customers/1.0.0" comment="Mongomery, Alabama, USA customers">
+  <customers firstName="John" lastName="Johnson" dateOfBirth="0006-06-03T00:00:00.000+0200">
+    <creditCard ccNumber="1234567890123456" expiresDate="0007-06-02T00:00:00.000+0200" type="Visa"/>
+    <address xsi:type="customers:USAddress" street="Washington st., 1" town="Montgomery" zipCode="12345" state="AL"/>
+  </customers>
+  <customers firstName="Mary" lastName="Wilkson" dateOfBirth="0006-07-10T00:00:00.000+0200">
+    <creditCard ccNumber="123123123123123" expiresDate="0007-06-03T00:00:00.000+0200" type="Visa"/>
+    <address xsi:type="customers:USAddress" street="Oldoaks st., 12" town="Mongomery" zipCode="12345" state="AL"/>
+  </customers>
+  <customers firstName="Peter" lastName="Barry" dateOfBirth="0019-12-25T00:00:00.000+0200">
+    <creditCard ccNumber="1234123412341234" expiresDate="0007-05-31T00:00:00.000+0200" type="MasterCard"/>
+    <address xsi:type="customers:USAddress" street="Parkway st., 123" town="Montgomery" zipCode="12344" state="AL"/>
+  </customers>
+</customers:CustomersDB>

@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.emf.search.tests.ecore; singleton:=true
+Bundle-Version: 0.7.1.qualifier
+Bundle-Activator: org.eclipse.emf.search.tests.ecore.Activator
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
+ org.junit;bundle-version="3.8.1",
+ org.eclipse.emf.search.ecore,
+ org.eclipse.emf.search,
+ org.eclipse.emf.search.tests,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.search.ui,
+ org.eclipse.core.resources;bundle-version="3.4.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.4.0",
+ org.eclipse.emf.search.common;bundle-version="0.7.1",
+ org.eclipse.emf.search.ecore.ocl;bundle-version="0.7.1",
+ org.eclipse.emf.search.ocl;bundle-version="0.7.1"
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.emf.search.tests.ecore,
+ org.eclipse.emf.search.tests.ecore.ocl.testcases,
+ org.eclipse.emf.search.tests.ecore.testcases,
+ org.eclipse.emf.search.tests.ecore.testsuites
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

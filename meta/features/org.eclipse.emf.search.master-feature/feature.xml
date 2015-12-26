@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.emf.search.master"
+      label="%featureName"
+      version="0.7.1.qualifier"
+      provider-name="%providerName">
+
+   <description url="http://www.eclipse.org/modeling/emft/?project=search#search">
+      %description
+   </description>
+
+   <copyright url="http://www.anyware-technologies.com/copyright.html">
+      %copyright
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      %license
+   </license>
+
+   <url>
+      <update label="%EMFTUpdateSiteName" url="http://download.eclipse.org/technology/emft/updates/"/>
+   </url>
+
+   <includes
+         id="org.eclipse.emf.search.all.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.search.examples"
+         version="0.0.0"/>
+
+</feature>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.0/notation" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="_Hvfh4Lz2EduWjOs2RiriMw" type="UMLClass" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_IPPY8Lz2EduWjOs2RiriMw" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_IPPY87z2EduWjOs2RiriMw" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_IPPY9Lz2EduWjOs2RiriMw" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_IPPY8bz2EduWjOs2RiriMw" description="Navigable ends are not supported yet" fillColor="255" lineColor="6737151"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IPPY8rz2EduWjOs2RiriMw" x="78" y="103"/>
+  </children>
+  <styles xmi:type="notation:PageStyle" xmi:id="_Hvfh4bz2EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:GuideStyle" xmi:id="_Hvfh4rz2EduWjOs2RiriMw"/>
+  <styles xmi:type="notation:DescriptionStyle" xmi:id="_Hvfh47z2EduWjOs2RiriMw"/>
+  <element xmi:type="uml:Model" href="7.23.Examples%20of%20navigable%20ends.uml#_FhWPULz2EduWjOs2RiriMw"/>
+</notation:Diagram>

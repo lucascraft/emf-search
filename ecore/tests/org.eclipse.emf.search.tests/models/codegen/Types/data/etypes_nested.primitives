@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prim:Bag xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Prim="http://www.eclipse.org/emf/search/codegen/tests/types/primitives/1.0.0" id="bag_lvl_1.0.0">
+  <values bigdecimal="11111" bigint="444444" booleanObj="true" byte="45" byteArray="11" char="101" characterObj="102" date="2008-09-12T00:00:00.000+0200" double="12.0" doubleObj="12.0" float="23.0" floatObj="43.0" int="45" integerObj="54" javaClass="java.lang.Boolean" long="12" longObj="12" short="45" shortObj="45" string="text"/>
+  <children id="bag_lvl_1.1.0">
+    <values bigdecimal="888" bigint="444444" booleanObj="true" byte="45" byteArray="11" char="101" characterObj="102" date="2008-09-12T00:00:00.000+0200" double="12.0" doubleObj="12.0" float="23.0" floatObj="43.0" int="45" integerObj="54" javaClass="java.lang.Boolean" long="12" longObj="12" short="45" shortObj="45" string="text"/>
+    <children id="bag_lvl_1.1.1">
+      <values bigdecimal="566666" bigint="444444" booleanObj="true" byte="45" byteArray="11" char="101" characterObj="102" date="2008-09-12T00:00:00.000+0200" double="12.0" doubleObj="12.0" float="23.0" floatObj="43.0" int="45" integerObj="54" javaClass="java.lang.Boolean" long="12" longObj="12" short="45" shortObj="45" string="text"/>
+      <children id="bag_lvl_1.1.1.1">
+        <values bigdecimal="44456" bigint="444444" booleanObj="true" byte="45" byteArray="11" char="101" characterObj="102" date="2008-09-12T00:00:00.000+0200" double="12.0" doubleObj="12.0" float="23.0" floatObj="43.0" int="45" integerObj="54" javaClass="java.lang.Boolean" long="12" longObj="12" short="45" shortObj="45" string="text"/>
+      </children>
+    </children>
+  </children>
+</Prim:Bag>

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>EMF Search</title>
+</head>
+
+<body>
+<h1>Introduction</h1>
+
+<p>
+EMF Search will provide the fundamental infrastructure and
+components for search queries on EMF based models. A particular focus is
+made on integration with the Eclipse Core Search API for end user tight
+integration.
+</p>
+
+<p>
+EMF Search is an Ecore meta-model based extensible search engine which 
+purpose is to provide users query launching services against Ecore based models.
+</p>
+
+<p>
+Meta-model based search is basically being able to take advantage of a meta-model structure to run generic search queries onto it.
+This means that a meta-model structure, defining a minimal modeling "organizaton", contains information enough to
+get operations applied to it, and by extension having same operations applied to any inheriting model compliant with this meta-model structure.
+Ecore based search is in fact a particular case of meta-model based treatment, a typical approach also known as Model Driven Architecture. 
+</p>
+
+<p>
+In other words, this allows to develop meta-model based generic algorithms, valid across any user defined model extending elements & structure of a given meta-model.
+Such technics are usually employed as part of a code generation developement process also known as Model Driven Development, allowing developers to code things once,
+setting up templates based code generation getting its data from the particular valuation of an instance of a given meta-model (eg: 
+An actual user defined model or domain model populated with pertinent data). 
+</p>
+
+<p>
+(see also <a href="http://www.eclipse.org">EMF : Eclipse Modeling Framework</a>).
+</p>
+
+<h1>Terminology</h1>
+
+<p>
+For model search explanatory purposes, we need to introduce some terminology. First at all, lets keep in mind a model search query always need to deal with entities such as 
+a scope of model resource(s)/element(s) onto which a search query will apply, a set of participant meta-elements which the search query will consider, and finally a search query, textual, 
+scriptical,programatic which an associated model search engine will evaluate against a scope and participants. This evaluation obviously having the role to produce Model Search Results.
+</p>
+
+<p>
+<img src="../pictures/EMFModelSearchQueryClassDiagram.png" title="EMF Model Search Query Entites Overview"><img/>
+</p>
+
+<p>
+This brief explanation just made main concepts appearing : Model Search Scope, Model Search Participants, Model Search Query, Model Search Engine, Model Search Results.
+</p>
+
+<p>
+<ul>
+	<li> Model Search Engine
+	<ul>
+		<p>
+		EMF Search has extension point allowing user to contribute custom model search engines (see <b>org.eclipse.emf.search.modelSearchEngine</b> extension point definition).
+		A model search engine has responsability, given a model resource scope, to evaluate a model search query applying only on a set of selected meta-elements (called meta-elements participants).
+		</p>
+	</ul>
+	
+	<li> Model Search Query
+	<ul>
+		<p>
+		EMF Search offers extensible model search queries mechanism. Users can contribute model search queries potentially combined with any numbers of diferent elements particpants.
+		(eg. given the fact different user efined elements extends Ecore meta-elements). As a result, users can register to org.eclipse.emf.search.modelSearchID extension their own 
+		model search queries (plus the way to handle it from UI point of view) and the, associating it to an existing model search engine.
+		</p>
+	</ul>
+	
+	<li> Model Search Particiants
+	<ul>
+		<p>
+		EMF Search offers extensible model search participants elements mechanism. Users can contribute model search participants potentially combined with any numbers of diferent model search queries. 
+		As a result, users can register to org.eclipse.emf.search.modelSearchParticipantTab extension their own 
+		model search participant elements (plus the way to handle it from UI point of view) and, associating it to an existing model search engine.
+		</p>
+	</ul>
+	
+	<li> Model Search Scope
+	<ul>
+		<p>
+		Model Search Scope stands for a set of ecore resources to be considerer by the search query. We can make a comparison with platform search concepts from the scope point of view. 
+		As in the text search or java search, user can search into the whole workspace or reduce its scope to selected resources, selected projects or even given working set.
+		</p>
+	</ul>
+	
+	<li> Model Search Result
+	<ul>
+		<p>
+		Query evaluation produces matches, being collected in a result object or each resource evaluated. Matches can be considered as reult entries of top level reult object.
+		These matches are considered as Model Search Result and will populate the Eclipse Search View.
+		</p>
+	</ul>
+
+</ul>
+</p>
+
+<h1>Search Integration</h1>
+
+<p>
+EMF Model search integration is available by Ctrl+H shortcut. It pops up the Eclipse search dialog with an additional "modeling" tab.
+</p>
+
+<p>
+<ul>
+	<li> Search Page : org.eclipse.search.searchPages
+		<p>
+		</p>
+		
+		<p>
+			<img src="../pictures/searchPagesContribution.png"></img>
+		</p>
+	<li> Search Result Page : org.eclipse.search.searchResultViewPages
+		<p>
+		</p>
+		
+		<p>
+			<img src="../pictures/searchViewContribution.png"></img>
+		</p>
+	<li> Search Result editor interactions
+</ul>
+</p>
+
+<h1>Ecore Search</h1>
+
+<p>
+<ul>
+	<li> ECore Search : apply on Ecore meta-elements
+	<li> Generic to all Ecore based models
+	<li> Extensible for Search Pages
+</ul>
+</p>
+
+
+<a href="subtopic.html#architecture">Ecore Search Architecture Overview</a>
+
+<!--
+<pre class="codeblock">
+!!!!! PUT Some Code HERE !!!!!
+</pre>
+-->
+
+
+<h1>UML2 Search Example</h1>
+
+<p>
+<ul>
+	<li> ECore Search extension
+	<li> UML2 : Specific Ecore based model
+</ul>
+</p>
+
+<h1>Model Search Code Generation</h1>
+
+<p>
+<ul>
+	<li> Genmodel based Code Genration
+	<li> GenAdapter : org.eclipse.emf.codegen.ecore.generatorAdapters
+</ul>
+</p>
+<a href="subtopic.html#generation">Ecore Search Generation Overview</a>
+<h1>Extensions Points</h1>
+
+<p>
+<ul>
+	<li> org.eclipse.emf.search.modelSearchEngine
+	<ul>
+		<p>
+			<img src="../pictures/modelSearchEngineExtPoint.png"></img>
+		</p>
+	
+	</ul>
+	
+	<li> org.eclipse.emf.search.modelSearchID
+	<ul>
+		<p>
+			<img src="../pictures/modelSearchQueryTabExtPoint.png"></img>
+		</p>
+	</ul>
+	
+	<li> org.eclipse.emf.search.modelSearchParticipantTab
+	<ul>
+		<p>
+			<img src="../pictures/modelSearchParticipantTabExtPoint.png"></img>
+		</p>
+	</ul>
+</ul>
+
+</p>
+
+<h1>Development Guide</h1>
+
+<p>
+<ul>
+	<li> Code Generation Tips
+	<li>APIs : How to 
+	<li> Customize Model Search Code
+</ul>
+</p>
+
+<h1>Standalone Mode</h1>
+
+<p>
+<ul>
+	<li>Standalone
+	<li>RCP 
+</ul>
+</p>
+
+</body>
+</html>

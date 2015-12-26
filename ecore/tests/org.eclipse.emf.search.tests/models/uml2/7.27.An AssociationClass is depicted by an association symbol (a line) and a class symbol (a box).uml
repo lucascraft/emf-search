@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_ruheUL2hEduWjOs2RiriMw">
+  <packagedElement xmi:type="uml:Class" xmi:id="_vj-F4L2hEduWjOs2RiriMw" name="Person"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wdV94L2hEduWjOs2RiriMw" name="Company"/>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_4Oyg8L2hEduWjOs2RiriMw" name="Job" memberEnd="_St7lIAS7Ed2m46ochDisLw _TLlxgAS7Ed2m46ochDisLw">
+    <ownedEnd xmi:id="_St7lIAS7Ed2m46ochDisLw" name="company" type="_wdV94L2hEduWjOs2RiriMw" association="_4Oyg8L2hEduWjOs2RiriMw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c6p30AS7Ed2m46ochDisLw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_TLlxgAS7Ed2m46ochDisLw" name="person" type="_vj-F4L2hEduWjOs2RiriMw" association="_4Oyg8L2hEduWjOs2RiriMw"/>
+  </packagedElement>
+</uml:Model>

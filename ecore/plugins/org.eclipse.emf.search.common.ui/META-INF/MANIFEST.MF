@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.emf.search.common.ui;singleton:=true
+Bundle-Version: 0.7.1.qualifier
+Bundle-Activator: org.eclipse.emf.search.ecore.common.ui.Activator
+Bundle-Localization: plugin
+Bundle-Vendor: %providerName
+Bundle-Copyright: %copyright
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.emf.search.ecore.common.ui

@@ -1,0 +1,53 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.ui.handlers"
+	 imports="java.util.List org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.emf.search.codegen.model.generator.*"
+	 class="EditorSelectionHandler"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String modelBasePackage = settings.getGenModel().getModelPluginPackageName();
+	String editorBasePackage = settings.getGenModel().getEditorPluginPackageName();
+	List<GenPackage> genPackagesList = settings.getGenModel().getGenPackages();
+%>
+package search.ui.handlers;
+
+import java.util.Arrays;
+
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.search.ui.handlers.AbstractModelElementEditorSelectionHandler;
+import org.eclipse.ui.IEditorPart;
+
+<% for (GenPackage p : genPackagesList) { %>
+import <%=p.getQualifiedEditorClassName()%>;
+<% } %> 
+
+/**
+ * Defines entity responsible of editor selection handling.
+ * 
+ * In other words users defines here how the search double clicked result will be handled in 
+ * terms of corresponding editor selection.
+ *  
+ */
+public class EditorSelectionHandler extends AbstractModelElementEditorSelectionHandler {
+
+	public boolean isCompatibleModelElementEditorSelectionHandler(IEditorPart part) {
+     return <% String or = ""; for (GenPackage p : genPackagesList) {%> <%=or%> (part instanceof <%=p.getEditorClassName()%>) <%or = "||"; }%>; 
+	}
+
+	public IStatus handleOpenTreeEditorWithSelection(IEditorPart part,
+			Object selection) {
+		<% for (GenPackage p : genPackagesList) { %>
+		if (part instanceof <%=p.getEditorClassName()%>) {
+			((<%=p.getEditorClassName()%>)part).setSelectionToViewer(Arrays.asList(new Object[]{selection}));
+			return Status.OK_STATUS;
+		}
+		<% } %> 
+		return Status.CANCEL_STATUS;
+	}
+
+	@Override
+	protected String getNsURI() {
+		return ""; // TODO: user to return appropriate nsURI
+	}
+}

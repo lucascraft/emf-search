@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.emf.search.ui" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.emf.search.ui" id="modelSearchPageActionContribution" name="modelSearchPageActionContribution"/>
+      </appinfo>
+      <documentation>
+         Users wanting to contribute custom actions to model search result page must use this extnsion point.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="actionContribution"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="actionContribution">
+      <annotation>
+         <documentation>
+            Users wanting to contribute custom actions to model search result page must use this extnsion point.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="action" type="string" use="required">
+            <annotation>
+               <documentation>
+                  user custom action extending org.eclipse.emf.search.ui.actions.AbstractModelSearchPageAction
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="org.eclipse.emf.search.ui.actions.AbstractModelSearchPageAction:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  unique model search result page action ID
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="targetMenuID" type="string" use="required">
+            <annotation>
+               <documentation>
+                  already contributed model search page result menu ID
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="targetMetaModelID" type="string">
+            <annotation>
+               <documentation>
+                  target meta model ID for which action has to be contextually displayed
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="icon" type="string">
+            <annotation>
+               <documentation>
+                  action icon
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="resource"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         0.7.0
+      </documentation>
+   </annotation>
+
+
+
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         Copyright (c) 2007,2008 Anyware Technologies and others. All rights reserved. 
+
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+
+Contributors: 
+	Lucas Bigeardel (Anyware Technologies) - initial API and implementation
+	Lucas Bigeardel - documentation
+
+      </documentation>
+   </annotation>
+
+</schema>

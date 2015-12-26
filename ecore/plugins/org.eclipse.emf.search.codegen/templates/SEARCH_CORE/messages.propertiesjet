@@ -1,0 +1,15 @@
+<%@ jet
+	 package="org.eclipse.emf.search.codegen.jet.templates.core"
+	 imports=" org.eclipse.emf.search.codegen.model.generator.*"
+	 class="MessagesProperties"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String modelName = settings.getGenModel().getModelName();
+%>
+
+ModelSearchQuery.ClassifiersWalkErrorMessage=impossible to walk <%=modelName%> classifiers
+ModelSearchQuery.NormalTextMessage=<%=modelName%>  Normal Text
+ModelSearchQuery.CaseSensitiveMessage=<%=modelName%>  Case Sensitive
+ModelSearchQuery.RegularExpressionMessage=<%=modelName%>  Regular Expression
+ModelSearchQuery.Message= <%=modelName%>

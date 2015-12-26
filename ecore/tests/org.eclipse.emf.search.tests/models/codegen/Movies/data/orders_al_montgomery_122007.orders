@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders:OrdersDB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:orders="http://www.eclipse.org/emf/search/test/models/movies/orders/1.0.0">
+  <orders dateRequested="0007-05-30T00:00:00.000+0200">
+    <customer href="customers_al_montgomery.customers#//@customers.0"/>
+    <movies href="movies_general.movies#//@movies.0/@copies.0"/>
+  </orders>
+  <orders dateRequested="0008-05-29T00:00:00.000+0200">
+    <customer href="customers_al_montgomery.customers#//@customers.1"/>
+    <movies href="movies_general.movies#//@movies.1/@copies.0"/>
+  </orders>
+  <orders dateRequested="0009-05-29T00:00:00.000+0200">
+    <customer href="customers_al_montgomery.customers#//@customers.2"/>
+    <movies href="movies_general.movies#//@movies.0/@copies.2"/>
+    <movies href="movies_general.movies#//@movies.1/@copies.1"/>
+  </orders>
+</orders:OrdersDB>
