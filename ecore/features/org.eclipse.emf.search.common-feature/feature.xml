@@ -45,7 +45,7 @@
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.core.resources" version="3.101.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jface" version="3.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.5.0" match="greaterOrEqual"/>
    </requires>
