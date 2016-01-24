@@ -1,0 +1,90 @@
+/**
+ *   Copyright (c) 2007-2008 Anyware Technologies and others. All rights reserved. This program   and the accompanying materials are made available under the terms of the   Eclipse Public License v1.0 which accompanies this distribution, and is   available at http://www.eclipse.org/legal/epl-v10.html        Contributors: Lucas Bigeardel (Anyware Technologies) - initial API and   implementation
+ * 		Lucas Bigeardel - update EPL header
+ *
+ * $Id: ModelSearchGenSettings.java,v 1.3 2008/04/10 23:32:22 lbigearde Exp $
+ */
+package org.eclipse.papyrus.infra.emf.search.codegen.model.generator;
+
+import org.eclipse.emf.codegen.ecore.genmodel.GenModel;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Model Search Gen Settings</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link org.eclipse.papyrus.infra.emf.search.codegen.model.generator.ModelSearchGenSettings#getGenModel <em>Gen Model</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.infra.emf.search.codegen.model.generator.ModelSearchGenSettings#getTextualSettings <em>Textual Settings</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see org.eclipse.papyrus.infra.emf.search.codegen.model.generator.GeneratorPackage#getModelSearchGenSettings()
+ * @model
+ * @generated
+ */
+public interface ModelSearchGenSettings extends EObject {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "  Copyright (c) 2007-2008 Anyware Technologies and others. All rights reserved. This program   and the accompanying materials are made available under the terms of the   Eclipse Public License v1.0 which accompanies this distribution, and is   available at http://www.eclipse.org/legal/epl-v10.html        Contributors: Lucas Bigeardel (Anyware Technologies) - initial API and   implementation\r\t\tLucas Bigeardel - update EPL header";
+
+	/**
+	 * Returns the value of the '<em><b>Gen Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gen Model</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gen Model</em>' reference.
+	 * @see #setGenModel(GenModel)
+	 * @see org.eclipse.papyrus.infra.emf.search.codegen.model.generator.GeneratorPackage#getModelSearchGenSettings_GenModel()
+	 * @model
+	 * @generated
+	 */
+	GenModel getGenModel();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.infra.emf.search.codegen.model.generator.ModelSearchGenSettings#getGenModel <em>Gen Model</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gen Model</em>' reference.
+	 * @see #getGenModel()
+	 * @generated
+	 */
+	void setGenModel(GenModel value);
+
+	/**
+	 * Returns the value of the '<em><b>Textual Settings</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Textual Settings</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Textual Settings</em>' reference.
+	 * @see #setTextualSettings(TextualSettings)
+	 * @see org.eclipse.papyrus.infra.emf.search.codegen.model.generator.GeneratorPackage#getModelSearchGenSettings_TextualSettings()
+	 * @model
+	 * @generated
+	 */
+	TextualSettings getTextualSettings();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.infra.emf.search.codegen.model.generator.ModelSearchGenSettings#getTextualSettings <em>Textual Settings</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Textual Settings</em>' reference.
+	 * @see #getTextualSettings()
+	 * @generated
+	 */
+	void setTextualSettings(TextualSettings value);
+
+} // ModelSearchGenSettings

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+  Copyright (c) 2007, 2008 Anyware Technologies. All rights reserved. This program
+  and the accompanying materials are made available under the terms of the
+  Eclipse Public License v1.0 which accompanies this distribution, and is
+  available at http://www.eclipse.org/legal/epl-v10.html
+    
+  Contributors: Lucas Bigeardel (Anyware Technologies) - initial API and
+  implementation
+-->
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.modelSearchEngine">
+      <modelSearchEngine
+            id="org.eclipse.papyrus.infra.emf.search.ecoreSearchEngine"
+            label="%EcoreModelSearchEngine.Label"
+            modelResourceValidator="org.eclipse.papyrus.infra.emf.search.ecore.engine.EcoreModelResourceValidator"
+            queryParametersFactory="org.eclipse.papyrus.infra.emf.search.ecore.factories.EcoreModelSearchQueryParametersFactory"
+            searchQueryFactory="org.eclipse.papyrus.infra.emf.search.ecore.factories.EcoreModelSearchQueryFactory"/>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.modelScopeFactory">
+      <ScopeFactory
+            factory="org.eclipse.papyrus.infra.emf.search.ecore.scope.ModelSearchScopeFactory"
+            id="org.eclipse.papyrus.infra.emf.search.ModelScopeFactory">
+      </ScopeFactory>
+   </extension>
+</plugin>

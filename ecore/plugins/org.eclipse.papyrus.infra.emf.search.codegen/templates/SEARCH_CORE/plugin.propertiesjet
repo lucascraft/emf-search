@@ -1,0 +1,12 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.core"
+	 imports=" org.eclipse.papyrus.infra.emf.search.codegen.model.generator.*"
+	 class="PluginProperties"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String modelName = settings.getGenModel().getModelName();
+%>
+
+pluginName=<%=modelName%> Model Search Core Plug-in 
+providerName=Eclipse.org

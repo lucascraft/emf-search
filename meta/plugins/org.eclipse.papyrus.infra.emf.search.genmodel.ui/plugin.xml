@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+  Copyright (c) 2008 Lucas Bigeardel and others. All rights reserved. This program
+  and the accompanying materials are made available under the terms of the
+  Eclipse Public License v1.0 which accompanies this distribution, and is
+  available at http://www.eclipse.org/legal/epl-v10.html
+    
+  Contributors: Lucas Bigeardel - initial API and
+  implementation
+-->
+<plugin>
+
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="org.eclipse.papyrus.infra.emf.search.genModelPlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="1"
+            label="Text"
+            queryCompositeAreaFactory="org.eclipse.papyrus.infra.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="org.eclipse.papyrus.infra.emf.search.ui.pages.GenModelSearchPageID"
+            tooltip="Gen Model">
+      </queryTab>
+   </extension>
+   
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchParticipantTab">
+      <participantTab
+            id="org.eclipse.papyrus.infra.emf.search.genModelParticipantTab"
+            image="icons/full/obj16/genmodel.gif"
+            index="2"
+            label="GenModel"
+            participantCompositeAreaFactory="org.eclipse.papyrus.infra.emf.search.genmodel.ui.factories.GenModelSearchParticipantAreaFactory"
+            elementModelEditorSelectionHandler="org.eclipse.papyrus.infra.emf.search.genmodel.ui.handlers.GenModelEditorSelectionHandler"
+            elementComposeableAdapterFactory="org.eclipse.emf.codegen.ecore.genmodel.provider.GenModelItemProviderAdapterFactory"
+            targetSearchPageID="org.eclipse.papyrus.infra.emf.search.ui.pages.GenModelSearchPageID"
+            tooltip="Gen Model">
+      </participantTab>
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="org.eclipse.papyrus.infra.emf.search.genmodel.ui.pages.GenModelSearchPage"
+            icon="icons/full/obj16/gsearch.gif"
+            id="org.eclipse.papyrus.infra.emf.search.ui.pages.GenModelSearchPageID"
+            enabled="true"
+            label="GenModel"
+            showScopeSection="true"
+            tabPosition="1">
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchEngineMapping">
+      <mapping
+            engineID="org.eclipse.papyrus.infra.emf.search.genModelSearchEngine"
+            id="org.eclipse.papyrus.infra.emf.search.text4genmodel"
+            participantsTabID="org.eclipse.papyrus.infra.emf.search.genModelParticipantTab"
+            queryTabID="org.eclipse.papyrus.infra.emf.search.genModelPlainTextSearchID">
+      </mapping>
+   </extension>
+   
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchPageMenuContribution">
+      <!-- Navigation Actions -->
+      <menuContribution
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelNavigation"
+			label="%ModelSearchPageMenuContribution.GenModel2Code.Menu.Label"
+			order="0"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			image="icons/full/obj16/gsearch.gif">
+      </menuContribution>
+      
+      <!-- Generate Code Actions -->
+      <menuContribution
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelGeneration"
+			label="%ModelSearchPageMenuContribution.GenModelGeneration.Menu.Label"
+			order="1"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			image="icons/full/obj16/generation.png">
+      </menuContribution>
+   </extension>
+        
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchPageActionContribution">
+      <!-- Navigation Actions -->
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GoToGeneratedCodeAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GoToCodeActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelNavigation">
+      </actionContribution>
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GoToEcoreMetaModelAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GoToEcoreMetaModelActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelNavigation">
+      </actionContribution>
+      
+      <!-- Generate Code Actions -->
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GenerateEditCodeAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GenerateEditCodeActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelGeneration">
+      </actionContribution>
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GenerateEditorCodeAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GenerateEditorCodeActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelGeneration">
+      </actionContribution>
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GenerateTestsCodeAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GenerateTestsCodeActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelGeneration">
+      </actionContribution>
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GenerateModelCodeAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GenerateModelCodeActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelGeneration">
+      </actionContribution>
+      <actionContribution
+            action="org.eclipse.papyrus.infra.emf.search.genmodel.ui.actions.GenerateAllCodeAction"
+            id="org.eclipse.papyrus.infra.emf.search.genmodel.ui.GenerateAllCodeActionContribution"
+			targetMetaModelID="http://www.eclipse.org/emf/2002/GenModel"
+			targetMenuID="org.eclipse.papyrus.infra.emf.search.genmodel.ui.menu.GenModelGeneration">
+      </actionContribution>
+   </extension>
+
+</plugin>

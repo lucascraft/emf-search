@@ -1,0 +1,102 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.ui"
+	 imports="java.util.List org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.papyrus.infra.emf.search.codegen.model.generator.*"
+	 class="PluginXML"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String modelName = settings.getGenModel().getModelName();
+	List<GenPackage> genPackagesList = settings.getGenModel().getGenPackages();
+%>
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="search.ui.<%=modelName%>PlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="0"
+            label="%ModelSearchParticipantArea.<%=modelName%>PlainTextSearchExtPoint.Label"
+            queryCompositeAreaFactory="org.eclipse.papyrus.infra.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="search.ui.pages.<%=modelName%>ModelSearchPageID"
+            tooltip="%<%=modelName%>PlainTextSearchExtPoint.Tooltip"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchParticipantTab">
+         
+      <%
+      if ((genPackagesList.size()>1)) { %>
+           <participantTab
+            elementComposeableAdapterFactory="search.ui.providers.AllElementsItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="<%=settings.getGenModel().getModelPluginID()%>AllElementsParticipantTab"
+            image="icons/esearch.gif"
+            index="1"
+            label="%ModelSearchParticipantArea.AllElementsParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.<%=modelName%>ModelSearchPageID"
+            targetNsURI=""
+            tooltip="%ModelSearchParticipantArea.AllElementsParticipantTab.Tooltip">
+      </participantTab>
+      
+  <%    }
+      
+      for (GenPackage p : genPackagesList) { %>
+      <participantTab
+            elementComposeableAdapterFactory="<%=p.getQualifiedItemProviderAdapterFactoryClassName()%>"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="<%=p.getQualifiedPackageInterfaceName()%>ParticipantTab"
+            image="icons/ecore.gif"
+            index="1"
+            label="%ModelSearchParticipantArea.<%=p.getPackageInterfaceName()%>ParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.<%=modelName%>ModelSearchPageID"
+            targetNsURI="<%=p.getNSURI()%>"
+            tooltip="%ModelSearchParticipantArea.<%=p.getPackageInterfaceName()%>ParticipantTab.Tooltip">
+      </participantTab>
+      
+      <% }
+      %>
+      
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="search.ui.pages.ModelSearchPage"
+            enabled="true"
+            icon="icons/esearch.gif"
+            id="search.ui.pages.<%=modelName%>ModelSearchPageID"
+            label="%ModelSearchParticipantArea.<%=modelName%>ModelSearchPage.Label"
+            showScopeSection="true"
+            tabPosition="0"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchEngineMapping">
+ 
+       <% 
+       if (genPackagesList.size()>1) {
+       %>
+      <mapping
+            id="<%=settings.getGenModel().getModelPluginID()%>.text4All"
+            engineID="search.<%=modelName%>SearchEngine"
+            participantsTabID="<%=settings.getGenModel().getModelPluginID()%>AllElementsParticipantTab"
+            queryTabID="search.ui.<%=modelName%>PlainTextSearchID">
+      </mapping>
+       <% 
+       }
+        for (GenPackage p : genPackagesList) { %>
+      <mapping
+            id="search.text4<%=p.getPackageInterfaceName()%>"
+            engineID="search.<%=modelName%>SearchEngine"
+            participantsTabID="<%=p.getQualifiedPackageInterfaceName()%>ParticipantTab"
+            queryTabID="search.ui.<%=modelName%>PlainTextSearchID">
+      </mapping>
+      <% }  %>
+      
+   </extension>
+</plugin>

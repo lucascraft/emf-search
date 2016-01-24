@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.papyrus.infra.emf.search.sdk_0.7.1.201601242122.jar" id="org.eclipse.papyrus.infra.emf.search.sdk" version="0.7.1.201601242122"/>
+   <feature url="features/org.eclipse.papyrus.uml2.search_0.7.1.201601242122.jar" id="org.eclipse.papyrus.uml2.search" version="0.7.1.201601242122"/>
+</site>

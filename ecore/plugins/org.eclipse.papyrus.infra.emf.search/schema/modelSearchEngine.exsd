@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.papyrus.infra.emf.search" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.papyrus.infra.emf.search" id="modelSearchEngine" name="modelSearchEngine"/>
+      </appinfo>
+      <documentation>
+         Users wanting to contribute a custom ecore metamodel based search should extend modelSearchEngine.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="modelSearchEngine"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="modelSearchEngine">
+      <annotation>
+         <documentation>
+            Users wanting to contribute an custom ecore metamodel based search should extends modelSearchEngine.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  unique model search engine ID
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string" use="required">
+            <annotation>
+               <documentation>
+                  model search engine ID
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="searchQueryFactory" type="string" use="required">
+            <annotation>
+               <documentation>
+                  This extension point element describes a model search engine compliant with org.eclipse.papyrus.infra.emf.search.providers.IModelSearchQueryFactory APIs.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="org.eclipse.papyrus.infra.emf.search.providers.IModelSearchQueryFactory"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="queryParametersFactory" type="string" use="required">
+            <annotation>
+               <documentation>
+                  This extension point element describes a model search engine parameter factory compliant with org.eclipse.papyrus.infra.emf.search.providers.IModelSearchQueryParametersFactory APIs
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="org.eclipse.papyrus.infra.emf.search.providers.IModelSearchQueryParametersFactory"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="modelResourceValidator" type="string" use="required">
+            <annotation>
+               <documentation>
+                  This extension point element describes a model search engine resource validator compliant with org.eclipse.papyrus.infra.emf.search.providers.IModelSearchQueryParametersFactory APIs and specializing org.eclipse.papyrus.infra.emf.search.engine.AbstractModelResourceValidator
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="org.eclipse.papyrus.infra.emf.search.engine.AbstractModelResourceValidator"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         Eclipse Modeling EMFT Search 0.1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         &lt;extension
+         point=&quot;org.eclipse.papyrus.infra.emf.search.modelSearchEngine&quot;&gt;
+      &lt;modelSearchEngine
+            id=&quot;org.eclipse.papyrus.infra.emf.search.ecoreSearchEngine&quot;
+            label=&quot;%EcoreModelSearchEngine.Label&quot;
+            modelResourceValidator=&quot;org.eclipse.papyrus.infra.emf.search.ecore.engine.EcoreModelResourceValidator&quot;
+            queryParametersFactory=&quot;org.eclipse.papyrus.infra.emf.search.ecore.factories.EcoreModelSearchQueryParametersFactory&quot;
+            searchQueryFactory=&quot;org.eclipse.papyrus.infra.emf.search.ecore.factories.EcoreModelSearchQueryFactory&quot;/&gt;
+   &lt;/extension&gt;
+      </documentation>
+   </annotation>
+
+
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         Copyright (c) 2007,2008 Anyware Technologies and others. All rights reserved. 
+
+This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+
+Contributors: 
+	Lucas Bigeardel (Anyware Technologies) - initial API and implementation
+	Lucas Bigeardel - documentation
+
+      </documentation>
+   </annotation>
+
+</schema>

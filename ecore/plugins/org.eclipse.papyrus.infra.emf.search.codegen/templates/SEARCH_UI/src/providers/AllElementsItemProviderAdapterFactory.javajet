@@ -1,0 +1,34 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.ui.providers"
+	 imports="java.util.Collection java.util.List org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.papyrus.infra.emf.search.codegen.model.generator.*"
+	 class="AllElementsItemProviderAdapterFactory"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	List<GenPackage> genPackagesList = settings.getGenModel().getGenPackages();
+	String basePackage = settings.getGenModel().getModelPluginID();
+%>
+package search.ui.providers;
+
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+
+<% for (GenPackage p : genPackagesList) { %>
+import <%=p.getQualifiedItemProviderAdapterFactoryClassName()%>;
+<% } %> 
+
+public class AllElementsItemProviderAdapterFactory extends ComposedAdapterFactory {
+	public AllElementsItemProviderAdapterFactory() {
+		super(
+			new AdapterFactory[] {
+				new EcoreItemProviderAdapterFactory(),
+				<% for (GenPackage p : genPackagesList) { %>
+				new <%=p.getItemProviderAdapterFactoryClassName()%>(),
+				<% } %>
+				new ResourceItemProviderAdapterFactory()
+			}
+		);
+	}
+}

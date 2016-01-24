@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.Perspective"
+            id="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.application"
+            name="Ecore Search Example RCP">
+         <property
+               name="appName"
+               value="Ecore Search Example RCP">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+         
+      <actionSet
+            id="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.actionSet"
+            label="Runtime Model Search Action Set"
+            visible="true">
+            
+         <menu
+               id="modelSearchMenu"
+               label="Runtime &amp;Model Search Menu">
+            <separator
+                  name="modelSearchGroup">
+            </separator>
+         </menu>
+
+         <action
+               class="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.actions.RuntimeEObjectModelSearchAction"
+               icon="icons/esearch.gif"
+               id="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.actions.RuntimeEObjectModelSearchAction"
+               label="Runtime EObject Model Search Action"
+               menubarPath="modelSearchMenu/modelSearchGroup"
+               toolbarPath="modelSearchGroup"
+               tooltip="Runtime Model Search EObject Action">
+         </action>
+
+         <action
+               class="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.actions.RuntimeModelSearchAction"
+               icon="icons/esearch.gif"
+               id="org.eclipse.papyrus.infra.emf.search.examples.ecore.rcp.actions.RuntimeModelSearchAction"
+               label="Runtime &amp;Model Search Action"
+               menubarPath="modelSearchMenu/modelSearchGroup"
+               toolbarPath="modelSearchGroup"
+               tooltip="Runtime Model Search Action">
+         </action>
+         
+      </actionSet>
+   </extension>
+</plugin>

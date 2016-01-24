@@ -1,0 +1,14 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.ui"
+	 class="BuildProperties"
+%>
+	  
+source.. = src/
+output.. = bin/
+bin.includes = META-INF/,\
+               .,\
+               plugin.xml,\
+               icons/,\
+               plugin.properties,\
+               messages.properties
+               

@@ -1,0 +1,80 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.core.helper.launcher"
+	 imports="org.eclipse.papyrus.infra.emf.search.codegen.model.generator.* org.eclipse.emf.codegen.ecore.genmodel.GenPackage java.util.List"
+	 class="ModelSearchQueryLauncherHelper"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String basePackage = settings.getGenModel().getModelPluginPackageName();
+	List<GenPackage> genPackagesList = settings.getGenModel().getGenPackages();
+%>
+package search.helper.launcher;
+
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.papyrus.infra.emf.search.core.engine.IModelSearchQuery;
+import org.eclipse.papyrus.infra.emf.search.core.results.IModelSearchResult;
+import org.eclipse.papyrus.infra.emf.search.core.scope.IModelSearchScope;
+import org.eclipse.papyrus.infra.emf.search.ecore.helper.launcher.EcoreModelSearchQueryLauncherHelper;
+import org.eclipse.papyrus.infra.emf.search.ecore.regex.ModelSearchQueryTextualExpressionEnum;
+
+public class ModelSearchQueryLauncherHelper extends EcoreModelSearchQueryLauncherHelper {
+
+	private static ModelSearchQueryLauncherHelper instance;
+	
+	// Singleton
+	public static ModelSearchQueryLauncherHelper getInstance() {
+		return instance==null?instance = new ModelSearchQueryLauncherHelper():instance;
+	}
+	
+	//
+	// NORMAL TEXT
+	//
+	<% for (GenPackage p : genPackagesList) { %>
+	public IModelSearchResult launchGlobalTextual<%=p.getPackageName()%>ModelSearchQuery(String pattern, IModelSearchScope<Object, Resource> scope) {
+		IModelSearchQuery q = buildTextualModelSearchQuery(
+			pattern,
+			<%=p.getQualifiedPackageInterfaceName()%>.eINSTANCE.getEClassifiers(), 
+			ModelSearchQueryTextualExpressionEnum.NORMAL_TEXT,
+			scope,
+			"<%=p.getNSURI()%>" //$NON-NLS-1$
+		);
+		q.run(new NullProgressMonitor());
+		return q.getModelSearchResult();
+	}
+	<% } %> 
+
+	//
+	// REGEX
+	//
+	<% for (GenPackage p : genPackagesList) { %>
+	public IModelSearchResult launchGlobalRegex<%=p.getPackageName()%>ModelSearchQuery(String pattern, IModelSearchScope<Object, Resource> scope) {
+		IModelSearchQuery q = buildTextualModelSearchQuery(
+			pattern,
+			<%=p.getQualifiedPackageInterfaceName()%>.eINSTANCE.getEClassifiers(),
+			ModelSearchQueryTextualExpressionEnum.REGULAR_EXPRESSION,
+			scope,
+			"<%=p.getNSURI()%>" //$NON-NLS-1$
+		);
+		q.run(new NullProgressMonitor());
+		return q.getModelSearchResult();
+	}
+	<% } %> 
+	
+	//
+	// CASE SENSITIVE
+	//
+	<% for (GenPackage p : genPackagesList) { %>
+	public IModelSearchResult launchGlobalCaseSensitive<%=p.getPackageName()%>ModelSearchQuery(String pattern, IModelSearchScope<Object, Resource> scope) {
+		IModelSearchQuery q = buildTextualModelSearchQuery(
+		pattern,
+		<%=p.getQualifiedPackageInterfaceName()%>.eINSTANCE.getEClassifiers(),
+		ModelSearchQueryTextualExpressionEnum.CASE_SENSITIVE,
+		scope,
+		"<%=p.getNSURI()%>" //$NON-NLS-1$
+	);
+		q.run(new NullProgressMonitor());
+		return q.getModelSearchResult();
+	}
+	<% } %> 
+}

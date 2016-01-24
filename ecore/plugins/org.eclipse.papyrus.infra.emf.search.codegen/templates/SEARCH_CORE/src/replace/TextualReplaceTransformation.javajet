@@ -1,0 +1,110 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.core.replace"
+	 imports=""
+	 class="TextualReplaceTransformation"
+%>
+package search.replace;
+
+import java.util.List;
+import java.util.regex.Pattern;
+
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.papyrus.infra.emf.search.core.engine.IModelSearchQuery;
+import org.eclipse.papyrus.infra.emf.search.core.internal.replace.provisional.AbstractModelSearchTransformation;
+import org.eclipse.papyrus.infra.emf.search.ecore.engine.EcoreModelSearchQuery;
+import org.eclipse.papyrus.infra.emf.search.ecore.regex.ModelSearchQueryTextualExpressionEnum;
+import org.eclipse.papyrus.infra.emf.search.ecore.regex.ModelSearchQueryTextualExpressionMatchingHelper;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.ETypedElement;
+
+import search.engine.ModelSearchQuery;
+import search.util.TextualFeaturesUtils;
+
+public class TextualReplaceTransformation extends
+		AbstractModelSearchTransformation<EObject, IModelSearchQuery, String, String> {
+		
+	public TextualReplaceTransformation(EObject element, IModelSearchQuery query, String valuation) {
+		super(element, query, valuation);
+	}
+	
+    public boolean isValid() {
+        return getModifiedElement() instanceof EObject;
+    }
+    
+    
+    private String resolveText(EObject eObj, ETypedElement eTypedElem) {
+        return TextualFeaturesUtils.instance().getTextFromETypedElement(eObj, eTypedElem);
+    }
+
+    private boolean matchExpression(String valuation, String expression, ModelSearchQueryTextualExpressionEnum kind) {
+        return valuation != null && ModelSearchQueryTextualExpressionMatchingHelper.getInstance().lookAt(valuation, expression, kind);
+    }
+
+    private boolean isAValidAttribute(ETypedElement eTypedElem) {
+        return TextualFeaturesUtils.instance().getParticipantTextualTypedElement().contains(eTypedElem);
+    }
+
+    private String computeExpression(ModelSearchQuery query, ModelSearchQueryTextualExpressionEnum kind) {
+        String expression = query.getQueryExpression();
+        return (expression == "" && //$NON-NLS-1$ 
+                kind == ModelSearchQueryTextualExpressionEnum.NORMAL_TEXT) ?
+                        "*" : //$NON-NLS-2$
+                            expression;
+    }
+
+    public IStatus perform() {
+        try {
+            if (getQuery() instanceof ModelSearchQuery) {
+                ModelSearchQuery query = (ModelSearchQuery) getQuery();
+
+                String expr = query.getQueryExpression();
+                
+                List<EStructuralFeature> eligibleFeatures = TextualFeaturesUtils.instance().getEStructuralFeaturesFromQueryAndEObject(getModifiedElement(), query);
+
+                for (ETypedElement eTypedElem : eligibleFeatures) {
+                    if (isAValidAttribute(eTypedElem)) {
+                        ModelSearchQueryTextualExpressionEnum kind = ((EcoreModelSearchQuery) query).getKind();
+                        String valuation = resolveText(getModifiedElement(), eTypedElem);
+                        String expression = computeExpression(query, kind);
+                        if (matchExpression(valuation, expression, kind)) {
+                            String curValue = TextualFeaturesUtils.instance().getTextFromETypedElement(getModifiedElement(), eTypedElem);
+                            if (curValue != null && ModelSearchQueryTextualExpressionMatchingHelper.getInstance().lookAt(curValue, expr, query.getKind())) {
+                                switch (query.getKind()) {
+                                case REGULAR_EXPRESSION:
+                                    Pattern pattern = Pattern.compile(expr);
+
+                                    String newValue = pattern.matcher(curValue).replaceFirst(getValuation());
+                                    TextualFeaturesUtils.instance().setTextForETypedElement(getModifiedElement(), eTypedElem, newValue);
+
+                                    break;
+                                case CASE_SENSITIVE:
+                                case NORMAL_TEXT:
+                                    TextualFeaturesUtils.instance().setTextForETypedElement(getModifiedElement(), eTypedElem, getValuation());
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Throwable t) {
+            return Status.CANCEL_STATUS;
+        }
+        return Status.OK_STATUS;
+    }
+
+    @Override
+    public String getResult() {
+        Object o = getModifiedElement();
+
+        if (o instanceof ETypedElement) {
+            return TextualFeaturesUtils.instance().getTextFromETypedElement(((ETypedElement) o).eContainer(), (ETypedElement) o);
+        } else if (o instanceof EObject) {
+            return TextualFeaturesUtils.instance().getTextFromEStructuralFeatureIfAny((EObject) o);
+        }
+
+        return null;
+    }
+}

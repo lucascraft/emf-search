@@ -1,0 +1,38 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.core.factories"
+	 imports="org.eclipse.papyrus.infra.emf.search.codegen.model.generator.*"
+	 class="ModelSearchQueryParametersFactory"
+%>
+<%
+	ModelSearchGenSettings settings = (ModelSearchGenSettings) argument;
+	String basePackage = settings.getGenModel().getModelPluginPackageName();
+	String modelName = settings.getGenModel().getModelName();
+%>
+package search.factories;
+
+import org.eclipse.papyrus.infra.emf.search.core.factories.IModelSearchQueryParametersFactory;
+import org.eclipse.papyrus.infra.emf.search.core.parameters.AbstractModelSearchQueryParameters;
+import org.eclipse.papyrus.infra.emf.search.core.parameters.IModelSearchQueryParameters;
+
+/**
+ * Wraps ModelSearchQueryParameters creation.
+ */
+public class ModelSearchQueryParametersFactory implements IModelSearchQueryParametersFactory {
+	private static ModelSearchQueryParametersFactory instance;
+	
+	public ModelSearchQueryParametersFactory() {}
+	
+	public static ModelSearchQueryParametersFactory getInstance() {
+		return instance == null ? instance = new ModelSearchQueryParametersFactory() : instance;
+	}
+	
+	protected final class ModelSearchQueryParameters extends AbstractModelSearchQueryParameters {
+		public String getModelSearchEngineID() {
+			return "search.<%=modelName%>SearchEngine"; //$NON-NLS-1$
+		}	
+	}
+	
+	public IModelSearchQueryParameters createSearchQueryParameters() {
+		return new ModelSearchQueryParameters();
+	}
+}

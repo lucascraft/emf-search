@@ -1,0 +1,37 @@
+<%@ jet
+	 package="org.eclipse.papyrus.infra.emf.search.codegen.jet.templates.ui"
+	 imports="org.eclipse.papyrus.infra.emf.search.codegen.model.generator.*"
+	 class="ManifestMF"
+%>
+<%
+	ModelSearchGenSettings settings= (ModelSearchGenSettings) argument;
+	String modelPluginID = settings.getGenModel().getModelPluginID();
+	String editPluginID = settings.getGenModel().getEditPluginID();
+	String editorPluginID = settings.getGenModel().getEditorPluginID();
+%>
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: <%=modelPluginID%>.search.ui;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: %providerName
+Bundle-Activator: search.ui.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ <%=modelPluginID%>,
+ <%=editPluginID%>,
+ <%=editorPluginID%>,
+ org.eclipse.papyrus.infra.emf.search,
+ org.eclipse.papyrus.infra.emf.search.ui,
+ <%=modelPluginID%>.search,
+ org.eclipse.papyrus.infra.emf.search.ecore.ui,
+ org.eclipse.emf.ecore.edit,
+ org.eclipse.emf.ecore.editor
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: search.ui.areas,
+ search.ui.factories,
+ search.ui.l10n,
+ search.ui.factories,
+ search.ui.handlers

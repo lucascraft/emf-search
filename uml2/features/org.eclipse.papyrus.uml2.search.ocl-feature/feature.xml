@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.papyrus.uml2.search.ocl"
+      label="%featureName"
+      version="0.7.1.qualifier"
+      provider-name="%providerName">
+
+   <description url="http://www.eclipse.org/modeling/emft/?project=search#search">
+      %description
+   </description>
+
+   <copyright url="http://www.anyware-technologies.com/copyright.html">
+      %copyright
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      %license
+   </license>
+
+   <url>
+      <update label="%EMFTUpdateSiteName" url="http://download.eclipse.org/technology/emft/updates/"/>
+      <discovery label="EMFT Search" url="http://www.eclipse.org/modeling/emft/?project=search#search"/>
+   </url>
+
+   <includes
+         id="org.eclipse.papyrus.infra.emf.search.ecore.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.papyrus.infra.emf.search.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.papyrus.uml2.search.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.papyrus.uml2.search.runtime"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.query.ocl"/>
+      <import plugin="org.eclipse.ocl.ecore"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search.ecore.ocl"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search.ecore"/>
+      <import plugin="org.eclipse.papyrus.uml2.search"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search.ocl"/>
+      <import plugin="org.eclipse.uml2.uml"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search.ui"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search.ecore.ocl.ui"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.search.common" version="0.7.1" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.papyrus.uml2.search.ocl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.papyrus.uml2.search.ocl.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

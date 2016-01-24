@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+  Copyright (c) 2007, 2008 Anyware Technologies and others. All rights reserved. This program
+  and the accompanying materials are made available under the terms of the
+  Eclipse Public License v1.0 which accompanies this distribution, and is
+  available at http://www.eclipse.org/legal/epl-v10.html
+    
+  Contributors: 
+  		Lucas Bigeardel (Anyware Technologies) - initial API and implementation
+  		Lucas Bigeardel- fix page IDs typo
+-->
+<plugin>
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="org.eclipse.papyrus.uml2.search.ui.pages.UML2ModelSearchPage"
+            enabled="true"
+            icon="icons/usearch.gif"
+            id="org.eclipse.papyrus.uml2.search.ui.pages.UML2ModelSearchPageID"
+            label="%UML2ModelSearchPage.Label"
+            showScopeSection="true"
+            tabPosition="1"/>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="org.eclipse.papyrus.infra.emf.search.uml2PlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="1"
+            label="%UML2PlainTextSearchExtPoint.Label"
+            queryCompositeAreaFactory="org.eclipse.papyrus.infra.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="org.eclipse.papyrus.uml2.search.ui.pages.UML2ModelSearchPageID"
+            tooltip="%UML2PlainTextSearchExtPoint.Tooltip"/>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchParticipantTab">
+      <participantTab
+            elementComposeableAdapterFactory="org.eclipse.uml2.uml.edit.providers.UMLItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="org.eclipse.papyrus.uml2.search.ui.handlers.UML2EditorSelectionHandler"
+            id="org.eclipse.papyrus.uml2.search.uml2ParticipantTab"
+            image="icons/uml2.gif"
+            index="1"
+            label="%UML2ParticipantTab.Label"
+            participantCompositeAreaFactory="org.eclipse.papyrus.uml2.search.ui.factories.UML2ModelSearchParticipantAreaFactory"
+            targetSearchPageID="org.eclipse.papyrus.uml2.search.ui.pages.UML2ModelSearchPageID"
+            tooltip="%UML2ParticipantTab.Tooltip">
+      </participantTab>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.emf.search.ui.modelSearchEngineMapping">
+      <mapping
+            id="org.eclipse.papyrus.infra.emf.search.text4uml2"
+            engineID="org.eclipse.papyrus.uml2.search.uml2SearchEngine"
+            participantsTabID="org.eclipse.papyrus.uml2.search.uml2ParticipantTab"
+            queryTabID="org.eclipse.papyrus.infra.emf.search.uml2PlainTextSearchID">
+      </mapping>
+   </extension>
+</plugin>

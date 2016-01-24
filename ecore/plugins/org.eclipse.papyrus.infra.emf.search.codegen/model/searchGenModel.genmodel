@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="  Copyright (c) 2007-2008 Anyware Technologies and others. All rights reserved. This program   and the accompanying materials are made available under the terms of the   Eclipse Public License v1.0 which accompanies this distribution, and is   available at http://www.eclipse.org/legal/epl-v10.html        Contributors: Lucas Bigeardel (Anyware Technologies) - initial API and   implementation&#xD;&#x9;&#x9;Lucas Bigeardel - update EPL header"
+    modelDirectory="/org.eclipse.papyrus.infra.emf.search.codegen/src" modelPluginID="org.eclipse.papyrus.infra.emf.search.codegen"
+    modelName="SearchGenModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel#//genmodel">
+  <foreignModel>searchGenModel.ecore</foreignModel>
+  <genPackages prefix="Generator" basePackage="org.eclipse.papyrus.infra.emf.search.codegen.model"
+      disposableProviderFactory="true" ecorePackage="searchGenModel.ecore#/">
+    <genClasses ecoreClass="searchGenModel.ecore#//ModelSearchGenSettings">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference searchGenModel.ecore#//ModelSearchGenSettings/genModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference searchGenModel.ecore#//ModelSearchGenSettings/textualSettings"/>
+    </genClasses>
+    <genClasses ecoreClass="searchGenModel.ecore#//TextualSettings">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference searchGenModel.ecore#//TextualSettings/eStringAccessors"/>
+    </genClasses>
+    <genClasses ecoreClass="searchGenModel.ecore#//EStringAccessor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference searchGenModel.ecore#//EStringAccessor/genTypedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference searchGenModel.ecore#//EStringAccessor/genPackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute searchGenModel.ecore#//EStringAccessor/literal"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
