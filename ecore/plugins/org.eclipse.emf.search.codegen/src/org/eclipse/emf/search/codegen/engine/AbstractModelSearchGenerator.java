@@ -337,11 +337,11 @@ public abstract class AbstractModelSearchGenerator extends
 
 				// TODO: LB to find out why this SWT plugin ID naming is not
 				// consistant accross platforms : should it be ?
-				if (Platform.getOS().equals(Platform.OS_MACOSX)) {
-					addVariable("SWT", "org.eclipse.swt." + Platform.getWS() + "." + Platform.getOS()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				} else {
-					addVariable("SWT", "org.eclipse.swt." + Platform.getWS() + "." + Platform.getOS() + "." + Platform.getOSArch()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-				}
+//				if (Platform.getOS().equals(Platform.OS_MACOSX)) {
+//					addVariable("SWT", "org.eclipse.swt." + Platform.getWS() + "." + Platform.getOS()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+//				} else {
+//					addVariable("SWT", "org.eclipse.swt." + Platform.getWS() + "." + Platform.getOS() + "." + Platform.getOSArch()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+//				}
 				super.initialize(monitor);
 			}
 		};
