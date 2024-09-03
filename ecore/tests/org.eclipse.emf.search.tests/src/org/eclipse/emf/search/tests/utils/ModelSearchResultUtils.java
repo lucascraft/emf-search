@@ -1,5 +1,6 @@
 package org.eclipse.emf.search.tests.utils;
 
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.search.core.results.IModelResultEntry;
 import org.eclipse.emf.search.core.results.IModelSearchResult;
 import org.eclipse.emf.search.ecore.results.EcoreModelSearchResultEntry;

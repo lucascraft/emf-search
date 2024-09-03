@@ -142,13 +142,13 @@
 	<module>../../uml2/features/org.eclipse.uml2.search.common-feature</module>
 
 	<!--
+	<module>../../ecore/features/org.eclipse.emf.ecoretools.diagram.search-feature</module>
 	<module>../../meta/features/org.eclipse.emf.search.sdk-feature</module>
 	<module>../../meta/features/org.eclipse.emf.search.ocl-feature</module>
 	<module>../../ecore/features/org.eclipse.emf.search.ecore.ocl-feature</module>
 	<module>../../ecore/features/org.eclipse.emf.search.doc-feature</module>
 	<module>../../ecore/features/org.eclipse.emf.search.all.runtime-feature</module>
 	<module>../../ecore/features/org.eclipse.emf.search.all.sdk-feature</module>
-	<module>../../ecore/features/org.eclipse.emf.ecoretools.diagram.search-feature</module>
 	<module>../../uml2/features/org.eclipse.uml2.search-feature</module>
 	<module>../../uml2/features/org.eclipse.uml2.search.ocl-feature</module>
 	<module>../../uml2/features/org.eclipse.uml2.diagram.clazz.search-feature</module>

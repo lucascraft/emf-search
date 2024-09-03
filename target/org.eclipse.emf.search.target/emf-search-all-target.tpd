@@ -1,0 +1,51 @@
+target "EMF Search SDK ALL Target Platform Definition"
+
+location "https://download.eclipse.org/modeling/emf/updates/releases/" {
+	org.eclipse.emf
+	org.eclipse.emf.ecore
+	org.eclipse.emf.ecore.edit
+	org.eclipse.emf.ecore.editor
+	org.eclipse.emf.ecore.xmi
+	org.eclipse.emf.validation
+	org.eclipse.emf.codegen
+	org.eclipse.emf.codegen.ecore
+	org.eclipse.emf.common
+	org.eclipse.emf.query
+	org.eclipse.emf.query.ocl
+	org.eclipse.emf.edit
+}
+
+location "https://download.eclipse.org/ecoretools/updates/releases/3.5.1/2023-06" {
+	org.eclipse.emf.ecoretools.design
+	org.eclipse.emf.ecoretools.design.ui
+	org.eclipse.emf.ecoretools.ui
+	
+}
+
+//location "http://download.eclipse.org/releases/galileo/"
+//{
+//	org.eclipse.emf.ecoretools
+//	org.eclipse.emf.ecoretools.diagram
+//	org.eclipse.emf.ecoretools.diagram.ui.outline
+//}
+
+location "https://download.eclipse.org/modeling/mdt/uml2/updates/releases/" {
+	org.eclipse.uml2
+	org.eclipse.uml2.common			
+	org.eclipse.uml2.uml
+}
+
+location "https://download.eclipse.org/modeling/mdt/ocl/builds/release/"
+{
+	org.eclipse.ocl.uml
+	org.eclipse.ocl
+}
+
+location "https://archive.eclipse.org/tools/orbit/downloads/drops/R20120119162704/repository/" {
+	com.ibm.icu
+	com.ibm.icu.base	
+}
+
+
+
+

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipse EMF Search Target Platform
+Bundle-SymbolicName: org.eclipse.emf.search.target
+Bundle-Version: 0.7.1.qualifier
+Automatic-Module-Name: org.eclipse.emf.search.target
+Bundle-RequiredExecutionEnvironment: JavaSE-21
