@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.emf.search.all.runtime"
+      id="org.eclipse.emf.search.all.runtime.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -24,11 +24,11 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search"
+         id="org.eclipse.emf.search.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search"
+         id="org.eclipse.uml2.search.feature"
          version="0.0.0"/>
 
 </feature>

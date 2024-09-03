@@ -9,7 +9,7 @@
   implementation
 -->
 <feature
-      id="org.eclipse.emf.search.codegen"
+      id="org.eclipse.emf.search.codegen.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -32,11 +32,11 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.common"
+         id="org.eclipse.emf.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.genmodel"
+         id="org.eclipse.emf.search.genmodel.feature"
          version="0.0.0"/>
 
    <requires>

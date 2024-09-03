@@ -9,7 +9,7 @@
   implementation
 -->
 <feature
-      id="org.eclipse.emf.search.ecore.ocl"
+      id="org.eclipse.emf.search.ecore.ocl.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -32,15 +32,15 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.ocl"
+         id="org.eclipse.emf.search.ocl.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.runtime"
+         id="org.eclipse.emf.search.runtime.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.ecore"
+         id="org.eclipse.emf.search.ecore.feature"
          version="0.0.0"/>
 
    <requires>

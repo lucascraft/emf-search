@@ -9,7 +9,7 @@
   implementation
 -->
 <feature
-      id="org.eclipse.uml2.search"
+      id="org.eclipse.uml2.search.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -32,15 +32,15 @@
    </url>
 
    <includes
-         id="org.eclipse.uml2.search.common"
+         id="org.eclipse.uml2.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search.ocl"
+         id="org.eclipse.uml2.search.ocl.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search.runtime"
+         id="org.eclipse.uml2.search.runtime.feature"
          version="0.0.0"/>
 
    <includes

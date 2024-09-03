@@ -27,7 +27,6 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.search.tests.Activator;
-import org.eclipse.emf.test.common.EMFTestCommonPlugin;
 import org.osgi.framework.Bundle;
 
 
@@ -220,7 +219,7 @@ public class ModelSearchResourceUtils {
 	
 	@SuppressWarnings("unchecked")
 	private static void copyEcoreModelsFromTestEMFCommon()  throws CoreException, IOException {
-		Bundle bundle = EMFTestCommonPlugin.getPlugin().getBundle();
+		Bundle bundle = Activator.getDefault().getBundle();
 
 		Enumeration<URL> genmodels = bundle.findEntries("models", "*.genmodel", true);
 		while (genmodels.hasMoreElements()) {

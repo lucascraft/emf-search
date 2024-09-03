@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.emf.search_0.7.1.201601231658.jar" id="org.eclipse.emf.search" version="0.7.1.201601231658"/>
-   <feature url="features/org.eclipse.uml2.search_0.7.1.201601231658.jar" id="org.eclipse.uml2.search" version="0.7.1.201601231658"/>
+   <feature url="features/org.eclipse.emf.search_0.7.1.202409021939.jar" id="org.eclipse.emf.search" version="0.7.1.202409021939"/>
 </site>

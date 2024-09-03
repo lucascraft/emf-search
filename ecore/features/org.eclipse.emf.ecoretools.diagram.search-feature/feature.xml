@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.emf.ecoretools.diagram.search"
+      id="org.eclipse.emf.ecoretools.diagram.search.feature"
       label="%featureName"
       version="0.7.0.qualifier"
       provider-name="%providerName">
@@ -23,7 +23,7 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.common"
+         id="org.eclipse.emf.search.common.feature"
          version="0.0.0"/>
 
    <requires>

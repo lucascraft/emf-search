@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.emf.search.ocl"
+      id="org.eclipse.emf.search.ocl.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -23,7 +23,7 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.runtime"
+         id="org.eclipse.emf.search.runtime.feature"
          version="0.0.0"/>
 
    <requires>
@@ -40,16 +40,10 @@
 
    <plugin
          id="org.eclipse.emf.search.ocl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.emf.search.ocl.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>

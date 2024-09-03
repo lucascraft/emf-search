@@ -19,8 +19,6 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import junit.framework.TestCase;
-
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -28,9 +26,11 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.search.tests.Activator;
 import org.eclipse.emf.search.tests.utils.ModelSearchResourceUtils;
-import org.eclipse.emf.test.common.EMFTestCommonPlugin;
 import org.osgi.framework.Bundle;
+
+import junit.framework.TestCase;
 
 public abstract class AbstractEcoreQueryOnEObjectHelperTestCase extends TestCase {
 	protected Map<URL, EObject> roots;
@@ -51,7 +51,7 @@ public abstract class AbstractEcoreQueryOnEObjectHelperTestCase extends TestCase
 		
 		ModelSearchResourceUtils.initEcoreModelSearchTestProject();
 	
-		Bundle bundle = EMFTestCommonPlugin.getPlugin().getBundle();
+		Bundle bundle = Activator.getDefault().getBundle();
 
 		// Create a resource set.
 		ResourceSet resourceSet = new ResourceSetImpl();

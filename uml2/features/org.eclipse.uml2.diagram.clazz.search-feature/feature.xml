@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.uml2.diagram.clazz.search"
+      id="org.eclipse.uml2.diagram.clazz.search.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -23,11 +23,11 @@
    </url>
 
    <includes
-         id="org.eclipse.uml2.search.common"
+         id="org.eclipse.uml2.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search"
+         id="org.eclipse.emf.search.feature"
          version="0.0.0"/>
 
    <requires>
@@ -36,7 +36,6 @@
       <import plugin="org.eclipse.gmf.runtime.common.ui.services"/>
       <import plugin="org.eclipse.gmf.runtime.common.ui.services.action"/>
       <import plugin="org.eclipse.emf.search.common.ui"/>
-      <import plugin="org.eclipse.uml2.diagram.clazz"/>
       <import plugin="org.eclipse.uml2.search.common.ui"/>
       <import plugin="org.eclipse.emf.search.ui"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
@@ -47,9 +46,6 @@
 
    <plugin
          id="org.eclipse.uml2.diagram.clazz.search"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>

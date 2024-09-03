@@ -41,11 +41,9 @@ public class PluginXML
   protected final String TEXT_23 = "PlainTextSearchID\">" + NL + "      </mapping>";
   protected final String TEXT_24 = NL + "      <mapping" + NL + "            id=\"search.text4";
   protected final String TEXT_25 = "\"" + NL + "            engineID=\"search.";
-  protected final String TEXT_26 = "SearchEngine\"" + NL + "            participantsTabID=\"";
-  protected final String TEXT_27 = "ParticipantTab\"" + NL + "            queryTabID=\"search.ui.";
-  protected final String TEXT_28 = "PlainTextSearchID\">" + NL + "      </mapping>";
-  protected final String TEXT_29 = NL + "      " + NL + "   </extension>" + NL + "</plugin>";
-  protected final String TEXT_30 = NL;
+  protected final String TEXT_26 = "ParticipantTab\"" + NL + "            queryTabID=\"search.ui.";
+  protected final String TEXT_27 = NL + "      " + NL + "   </extension>" + NL + "</plugin>";
+  protected final String TEXT_28 = NL;
 
   public String generate(Object argument)
   {
@@ -113,14 +111,14 @@ public class PluginXML
     stringBuffer.append(p.getPackageInterfaceName());
     stringBuffer.append(TEXT_25);
     stringBuffer.append(modelName);
-    stringBuffer.append(TEXT_26);
+    stringBuffer.append(TEXT_21);
     stringBuffer.append(p.getQualifiedPackageInterfaceName());
-    stringBuffer.append(TEXT_27);
+    stringBuffer.append(TEXT_26);
     stringBuffer.append(modelName);
-    stringBuffer.append(TEXT_28);
+    stringBuffer.append(TEXT_23);
      }  
-    stringBuffer.append(TEXT_29);
-    stringBuffer.append(TEXT_30);
+    stringBuffer.append(TEXT_27);
+    stringBuffer.append(TEXT_28);
     return stringBuffer.toString();
   }
 }
