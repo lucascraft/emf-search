@@ -1,0 +1,59 @@
+<!--
+    Copyright (c) 2024 Lucas Bigeardel.
+   
+    This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License 2.0
+    which accompanies this distribution, and is available at
+    https://www.eclipse.org/legal/epl-2.0/
+   
+    SPDX-License-Identifier: EPL-2.0
+   
+    Contributors:
+        Lucas Bigeardel - initial API and implementation
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+    http://maven.apache.org/maven-v4_0_0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  
+  
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+   
+  
+  
+  
+  <parent>
+	<artifactId>releng</artifactId>
+    <groupId>org.eclipse.emf.search</groupId>
+    <version>0.7.1-SNAPSHOT</version>
+    <relativePath>../../../releng/org.eclipse.emf.search.tycho</relativePath>
+  </parent>
+  
+  <groupId>org.eclipse.uml2.search.ocl.ui</groupId>
+  <artifactId>org.eclipse.uml2.search.ocl.ui</artifactId>
+  
+  
+  <packaging>eclipse-plugin</packaging>
+  
+  <name>Eclipse UML2 OCL UI Search</name>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>21</source>
+          <target>21</target>
+          <release>21</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

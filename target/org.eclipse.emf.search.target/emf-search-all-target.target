@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="EMF Search SDK ALL Target Platform Definition" sequenceNumber="1725361462">
+  <locations>
+    <location includeMode="slicer" includeAllPlatforms="false" includeSource="false" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.ecore" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.ecore.edit" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.ecore.editor" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.ecore.xmi" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.validation" version="1.4.0.v20100428-2315"/>
+      <unit id="org.eclipse.emf.codegen" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.codegen.ecore" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.common" version="2.5.0.v200906151043"/>
+      <unit id="org.eclipse.emf.query" version="1.2.100.v200903190031"/>
+      <unit id="org.eclipse.emf.query.ocl" version="2.0.0.v20091215-1624"/>
+      <unit id="org.eclipse.emf.edit" version="2.5.0.v200906151043"/>
+      <repository location="https://download.eclipse.org/modeling/emf/updates/releases/"/>
+    </location>
+    <location includeMode="slicer" includeAllPlatforms="false" includeSource="false" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.ecoretools.design" version="3.5.1.202404261351"/>
+      <unit id="org.eclipse.emf.ecoretools.design.ui" version="3.5.1.202404261351"/>
+      <unit id="org.eclipse.emf.ecoretools.ui" version="3.5.1.202404261351"/>
+      <repository location="https://download.eclipse.org/ecoretools/updates/releases/3.5.1/2023-06"/>
+    </location>
+    <location includeMode="slicer" includeAllPlatforms="false" includeSource="false" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.uml2" version="5.5.3.v20221116-1811"/>
+      <unit id="org.eclipse.uml2.common" version="2.5.0.v20221116-1811"/>
+      <unit id="org.eclipse.uml2.uml" version="5.5.0.v20221116-1811"/>
+      <repository location="https://download.eclipse.org/modeling/mdt/uml2/updates/releases/"/>
+    </location>
+    <location includeMode="slicer" includeAllPlatforms="false" includeSource="false" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.ocl.uml" version="5.22.0.v20240902-1518"/>
+      <unit id="org.eclipse.ocl" version="3.22.0.v20240902-1518"/>
+      <repository location="https://download.eclipse.org/modeling/mdt/ocl/builds/release/"/>
+    </location>
+    <location includeMode="slicer" includeAllPlatforms="false" includeSource="false" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="com.ibm.icu" version="4.4.2.v20110823"/>
+      <unit id="com.ibm.icu.base" version="4.4.2.v20110831"/>
+      <repository location="https://archive.eclipse.org/tools/orbit/downloads/drops/R20120119162704/repository/"/>
+    </location>
+  </locations>
+</target>

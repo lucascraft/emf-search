@@ -9,7 +9,7 @@
   implementation
 -->
 <feature
-      id="org.eclipse.emf.search.tests"
+      id="org.eclipse.emf.search.tests.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -32,39 +32,39 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search"
+         id="org.eclipse.emf.search.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.codegen"
+         id="org.eclipse.emf.search.codegen.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.common"
+         id="org.eclipse.emf.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.ecore"
+         id="org.eclipse.emf.search.ecore.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.genmodel"
+         id="org.eclipse.emf.search.genmodel.feature.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.runtime"
+         id="org.eclipse.emf.search.runtime.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search"
+         id="org.eclipse.uml2.search.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search.common"
+         id="org.eclipse.uml2.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search.runtime"
+         id="org.eclipse.uml2.search.runtime.feature"
          version="0.0.0"/>
 
    <requires>

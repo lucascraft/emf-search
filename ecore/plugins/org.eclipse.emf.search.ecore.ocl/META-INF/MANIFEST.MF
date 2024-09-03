@@ -13,7 +13,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.search,
  org.eclipse.emf.search.ecore,
  org.eclipse.emf.search.ocl,
- org.eclipse.swt;bundle-version="3.4.0",
+ org.eclipse.swt,
  org.eclipse.emf.search.common;bundle-version="0.7.1"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.emf.search.ecore.ocl.engine,

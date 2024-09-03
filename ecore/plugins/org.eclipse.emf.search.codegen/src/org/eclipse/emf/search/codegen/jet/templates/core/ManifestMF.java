@@ -18,9 +18,8 @@ public class ManifestMF
   protected final String TEXT_2 = ".search;singleton:=true" + NL + "Bundle-Version: 1.0.0" + NL + "Bundle-Vendor: %providerName" + NL + "Bundle-Activator: search.Activator" + NL + "Bundle-Localization: plugin" + NL + "Require-Bundle: org.eclipse.core.runtime," + NL + " org.eclipse.core.resources," + NL + " org.eclipse.emf.ecore," + NL + " org.eclipse.emf.search," + NL + " org.eclipse.emf.search.common," + NL + " org.eclipse.emf.search.ecore,";
   protected final String TEXT_3 = NL + " ";
   protected final String TEXT_4 = ",";
-  protected final String TEXT_5 = NL + " ";
-  protected final String TEXT_6 = "," + NL + " org.eclipse.swt" + NL + "Bundle-ActivationPolicy: lazy" + NL + "Bundle-RequiredExecutionEnvironment: J2SE-1.5" + NL + "Export-Package: search," + NL + " search.helper.builder," + NL + " search.helper.launcher," + NL + " search.factories," + NL + " search.l10n," + NL + " search.engine," + NL + " search.replace," + NL + " search.evaluators," + NL + " search.util";
-  protected final String TEXT_7 = NL;
+  protected final String TEXT_5 = "," + NL + " org.eclipse.swt" + NL + "Bundle-ActivationPolicy: lazy" + NL + "Bundle-RequiredExecutionEnvironment: J2SE-1.5" + NL + "Export-Package: search," + NL + " search.helper.builder," + NL + " search.helper.launcher," + NL + " search.factories," + NL + " search.l10n," + NL + " search.engine," + NL + " search.replace," + NL + " search.evaluators," + NL + " search.util";
+  protected final String TEXT_6 = NL;
 
   public String generate(Object argument)
   {
@@ -36,10 +35,10 @@ public class ManifestMF
     stringBuffer.append(TEXT_3);
     stringBuffer.append(modelPluginID);
     stringBuffer.append(TEXT_4);
-    stringBuffer.append(TEXT_5);
+    stringBuffer.append(TEXT_3);
     stringBuffer.append(editPluginID);
+    stringBuffer.append(TEXT_5);
     stringBuffer.append(TEXT_6);
-    stringBuffer.append(TEXT_7);
     return stringBuffer.toString();
   }
 }

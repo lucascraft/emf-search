@@ -16,7 +16,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorUtil;
+//import org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorUtil;
 import org.eclipse.emf.search.ui.handlers.AbstractOpenDiagramHandler;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
@@ -40,13 +40,13 @@ public class OpenEcoreDiagramHandler extends AbstractOpenDiagramHandler {
 				HashSet<EObject> targetSet = new HashSet<EObject>();
 				targetSet.add(target);
 				
-				EcoreDiagramEditorUtil.LazyElement2ViewMap map = new EcoreDiagramEditorUtil.LazyElement2ViewMap(diagramEditPart.getDiagramView(), targetSet);
-				
-				View view = EcoreDiagramEditorUtil.findView(diagramEditPart, target, map);
-				
-				diagramEditPart.getViewer().reveal((EditPart)diagramEditor.getDiagramGraphicalViewer().getEditPartRegistry().get(view));
-				
-				SelectInDiagramHelper.selectElement(view);
+//				EcoreDiagramEditorUtil.LazyElement2ViewMap map = new EcoreDiagramEditorUtil.LazyElement2ViewMap(diagramEditPart.getDiagramView(), targetSet);
+//				
+//				View view = EcoreDiagramEditorUtil.findView(diagramEditPart, target, map);
+//				
+//				diagramEditPart.getViewer().reveal((EditPart)diagramEditor.getDiagramGraphicalViewer().getEditPartRegistry().get(view));
+//				
+//				SelectInDiagramHelper.selectElement(view);
 			}
 		}
 	}

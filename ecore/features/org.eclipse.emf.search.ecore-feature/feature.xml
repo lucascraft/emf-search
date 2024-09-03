@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.emf.search.ecore"
+      id="org.eclipse.emf.search.ecore.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -23,7 +23,7 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.runtime"
+         id="org.eclipse.emf.search.runtime.feature"
          version="0.0.0"/>
 
    <requires>
@@ -32,8 +32,8 @@
       <import plugin="org.eclipse.emf.ecore.edit"/>
       <import plugin="org.eclipse.emf.search"/>
       <import plugin="org.eclipse.swt"/>
-      <import plugin="org.eclipse.emf.ecore.xmi" version="2.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.query" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.query"/>
       <import plugin="org.eclipse.core.filesystem"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.ui"/>
@@ -44,16 +44,10 @@
 
    <plugin
          id="org.eclipse.emf.search.ecore"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.emf.search.ecore.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>

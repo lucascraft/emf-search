@@ -9,7 +9,7 @@
   implementation
 -->
 <feature
-      id="org.eclipse.emf.search.examples"
+      id="org.eclipse.emf.search.examples.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -53,16 +53,10 @@
 
    <plugin
          id="org.eclipse.emf.search.examples.ecore"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.emf.search.examples.ecore.rcp"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>

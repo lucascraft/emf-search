@@ -24,34 +24,28 @@ public class ModelSearchParticipantArea
   protected final String TEXT_2 = NL + "import ";
   protected final String TEXT_3 = ";";
   protected final String TEXT_4 = " " + NL;
-  protected final String TEXT_5 = NL + "import ";
-  protected final String TEXT_6 = ";";
-  protected final String TEXT_7 = " " + NL + "" + NL + "import org.eclipse.emf.ecore.EPackage;" + NL + "import org.eclipse.emf.ecore.ENamedElement;" + NL + "import org.eclipse.emf.ecore.EObject;" + NL + "import java.util.Arrays;" + NL + "" + NL + "public final class ModelSearchParticipantArea extends AbstractModelSearchParticipantArea {" + NL + "" + NL + "\tprivate String nsURI;" + NL + "\tpublic ModelSearchParticipantArea(Composite parent, AbstractModelSearchPage page, int style) {" + NL + "\t\tsuper(parent, page, style);" + NL + "\t\tcreateContent();" + NL + "\t}" + NL + "\t" + NL + "\tpublic ModelSearchParticipantArea(Composite parent, AbstractModelSearchPage page, int style, String nsURI) {" + NL + "\t\tsuper(parent, page, style);" + NL + "\t\tthis.nsURI = nsURI;" + NL + "\t\tcreateContent();" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected boolean getDefaultParticpantsControlEnabling() {" + NL + "\t\treturn false;" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tpublic List<AdapterFactory> getMetaElementComposeableAdapterFactories(String nsURI) {" + NL + "\t\treturn getMetaElementComposeableAdapterFactories();" + NL + "\t}" + NL + "\t@Override" + NL + "\tpublic List<AdapterFactory> getMetaElementComposeableAdapterFactories() {" + NL + "\t\tList<AdapterFactory> composeableAdapterFactories = new ArrayList<AdapterFactory>();" + NL + "\t\tcomposeableAdapterFactories.add(new EcoreItemProviderAdapterFactory());" + NL + "\t\t";
-  protected final String TEXT_8 = NL + "\t\tif (";
-  protected final String TEXT_9 = ".eNS_URI.equals(nsURI)) {" + NL + "\t\t\tcomposeableAdapterFactories.add(new ";
-  protected final String TEXT_10 = "());" + NL + "\t\t}\t" + NL + "\t\t";
-  protected final String TEXT_11 = NL + "\t\tif  (nsURI == null || \"\".equals(nsURI)) {" + NL + "\t\t\t";
-  protected final String TEXT_12 = NL + "\t\t\tcomposeableAdapterFactories.add(new ";
-  protected final String TEXT_13 = "());" + NL + "\t\t\t";
-  protected final String TEXT_14 = NL + "\t\t}" + NL + "\t\tcomposeableAdapterFactories.add(new ResourceItemProviderAdapterFactory());" + NL + "\t\treturn composeableAdapterFactories;" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tpublic AbstractMetaModelParticipantsItemProvider getMetaModelParticipantsItemProvider() {" + NL + "\t\treturn new MetaModelParticipantsItemProvider(getTargetMetaModelIDs());" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected Collection<EPackage> getTargetModelPackages() {" + NL + "\t\t";
-  protected final String TEXT_15 = NL + "\t\tif (";
-  protected final String TEXT_16 = ".eNS_URI.equals(nsURI)) {" + NL + "\t\t\treturn Arrays.asList(new EPackage[] { ";
-  protected final String TEXT_17 = ".eINSTANCE });" + NL + "\t\t}" + NL + "\t\t";
-  protected final String TEXT_18 = NL + "\t\treturn Arrays.asList(new EPackage[] {" + NL + "\t\t";
-  protected final String TEXT_19 = NL + "\t          ";
-  protected final String TEXT_20 = ".eINSTANCE";
-  protected final String TEXT_21 = NL + "\t\t";
-  protected final String TEXT_22 = NL + "\t\t});" + NL + " \t}" + NL + " \t" + NL + " \tpublic Collection<String> getTargetMetaModelIDs() {" + NL + "\t\t";
-  protected final String TEXT_23 = NL + "\t\tif (";
-  protected final String TEXT_24 = ".eNS_URI.equals(nsURI)) {" + NL + "\t\t\treturn Arrays.asList(new String[] { nsURI }); " + NL + "\t\t}" + NL + "\t\t";
-  protected final String TEXT_25 = NL + "\t\treturn Arrays.asList(new String[] {" + NL + "\t\t";
-  protected final String TEXT_26 = NL + "\t          ";
-  protected final String TEXT_27 = ".eNS_URI";
-  protected final String TEXT_28 = NL + "\t\t";
-  protected final String TEXT_29 = NL + "\t\t});" + NL + " \t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected String getTargetModelElementText(Object object) {" + NL + "\t\treturn object instanceof ENamedElement ? ((ENamedElement) object).getName() : null;" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected Image getTargetModelElementImage(Object object) {" + NL + "\t\ttry {" + NL + "\t\t\tif (object instanceof ENamedElement) {" + NL + "\t\t\t\tString imagePath = \"/icons/full/obj16/\" + computeElementImageName(((ENamedElement)object).getName()) + \".gif\"; //$NON-NLS-1$  //$NON-NLS-2$" + NL + "\t\t\t\tURL url = FileLocator.find(";
-  protected final String TEXT_30 = ".getPlugin().getBundle(), new Path(imagePath), null);" + NL + "\t\t\t\tif (url != null) {" + NL + "\t\t\t\t\treturn ModelSearchImagesUtil.getImage(url);" + NL + "\t\t\t\t}" + NL + "\t\t\t}" + NL + "\t\t} catch (Throwable t) {" + NL + "\t\t\tActivator.getDefault().getLog().log(new Status(Status.ERROR, Activator.PLUGIN_ID, \"Error while attempmting to retrieve image from edit\" + ";
-  protected final String TEXT_31 = ".getPlugin().getBundle() + \" bundle\")); //$NON-NLS-1$  //$NON-NLS-2$" + NL + "\t\t} " + NL + "\t\treturn null;" + NL + "\t}" + NL + "\t" + NL + "\tprivate String computeElementImageName(String name) {" + NL + "\t\treturn name;" + NL + "\t}" + NL + "}";
-  protected final String TEXT_32 = NL;
+  protected final String TEXT_5 = " " + NL + "" + NL + "import org.eclipse.emf.ecore.EPackage;" + NL + "import org.eclipse.emf.ecore.ENamedElement;" + NL + "import org.eclipse.emf.ecore.EObject;" + NL + "import java.util.Arrays;" + NL + "" + NL + "public final class ModelSearchParticipantArea extends AbstractModelSearchParticipantArea {" + NL + "" + NL + "\tprivate String nsURI;" + NL + "\tpublic ModelSearchParticipantArea(Composite parent, AbstractModelSearchPage page, int style) {" + NL + "\t\tsuper(parent, page, style);" + NL + "\t\tcreateContent();" + NL + "\t}" + NL + "\t" + NL + "\tpublic ModelSearchParticipantArea(Composite parent, AbstractModelSearchPage page, int style, String nsURI) {" + NL + "\t\tsuper(parent, page, style);" + NL + "\t\tthis.nsURI = nsURI;" + NL + "\t\tcreateContent();" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected boolean getDefaultParticpantsControlEnabling() {" + NL + "\t\treturn false;" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tpublic List<AdapterFactory> getMetaElementComposeableAdapterFactories(String nsURI) {" + NL + "\t\treturn getMetaElementComposeableAdapterFactories();" + NL + "\t}" + NL + "\t@Override" + NL + "\tpublic List<AdapterFactory> getMetaElementComposeableAdapterFactories() {" + NL + "\t\tList<AdapterFactory> composeableAdapterFactories = new ArrayList<AdapterFactory>();" + NL + "\t\tcomposeableAdapterFactories.add(new EcoreItemProviderAdapterFactory());" + NL + "\t\t";
+  protected final String TEXT_6 = NL + "\t\tif (";
+  protected final String TEXT_7 = ".eNS_URI.equals(nsURI)) {" + NL + "\t\t\tcomposeableAdapterFactories.add(new ";
+  protected final String TEXT_8 = "());" + NL + "\t\t}\t" + NL + "\t\t";
+  protected final String TEXT_9 = NL + "\t\tif  (nsURI == null || \"\".equals(nsURI)) {" + NL + "\t\t\t";
+  protected final String TEXT_10 = NL + "\t\t\tcomposeableAdapterFactories.add(new ";
+  protected final String TEXT_11 = "());" + NL + "\t\t\t";
+  protected final String TEXT_12 = NL + "\t\t}" + NL + "\t\tcomposeableAdapterFactories.add(new ResourceItemProviderAdapterFactory());" + NL + "\t\treturn composeableAdapterFactories;" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tpublic AbstractMetaModelParticipantsItemProvider getMetaModelParticipantsItemProvider() {" + NL + "\t\treturn new MetaModelParticipantsItemProvider(getTargetMetaModelIDs());" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected Collection<EPackage> getTargetModelPackages() {" + NL + "\t\t";
+  protected final String TEXT_13 = ".eNS_URI.equals(nsURI)) {" + NL + "\t\t\treturn Arrays.asList(new EPackage[] { ";
+  protected final String TEXT_14 = ".eINSTANCE });" + NL + "\t\t}" + NL + "\t\t";
+  protected final String TEXT_15 = NL + "\t\treturn Arrays.asList(new EPackage[] {" + NL + "\t\t";
+  protected final String TEXT_16 = NL + "\t          ";
+  protected final String TEXT_17 = ".eINSTANCE";
+  protected final String TEXT_18 = NL + "\t\t";
+  protected final String TEXT_19 = NL + "\t\t});" + NL + " \t}" + NL + " \t" + NL + " \tpublic Collection<String> getTargetMetaModelIDs() {" + NL + "\t\t";
+  protected final String TEXT_20 = ".eNS_URI.equals(nsURI)) {" + NL + "\t\t\treturn Arrays.asList(new String[] { nsURI }); " + NL + "\t\t}" + NL + "\t\t";
+  protected final String TEXT_21 = NL + "\t\treturn Arrays.asList(new String[] {" + NL + "\t\t";
+  protected final String TEXT_22 = ".eNS_URI";
+  protected final String TEXT_23 = NL + "\t\t});" + NL + " \t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected String getTargetModelElementText(Object object) {" + NL + "\t\treturn object instanceof ENamedElement ? ((ENamedElement) object).getName() : null;" + NL + "\t}" + NL + "\t" + NL + "\t@Override" + NL + "\tprotected Image getTargetModelElementImage(Object object) {" + NL + "\t\ttry {" + NL + "\t\t\tif (object instanceof ENamedElement) {" + NL + "\t\t\t\tString imagePath = \"/icons/full/obj16/\" + computeElementImageName(((ENamedElement)object).getName()) + \".gif\"; //$NON-NLS-1$  //$NON-NLS-2$" + NL + "\t\t\t\tURL url = FileLocator.find(";
+  protected final String TEXT_24 = ".getPlugin().getBundle(), new Path(imagePath), null);" + NL + "\t\t\t\tif (url != null) {" + NL + "\t\t\t\t\treturn ModelSearchImagesUtil.getImage(url);" + NL + "\t\t\t\t}" + NL + "\t\t\t}" + NL + "\t\t} catch (Throwable t) {" + NL + "\t\t\tActivator.getDefault().getLog().log(new Status(Status.ERROR, Activator.PLUGIN_ID, \"Error while attempmting to retrieve image from edit\" + ";
+  protected final String TEXT_25 = ".getPlugin().getBundle() + \" bundle\")); //$NON-NLS-1$  //$NON-NLS-2$" + NL + "\t\t} " + NL + "\t\treturn null;" + NL + "\t}" + NL + "\t" + NL + "\tprivate String computeElementImageName(String name) {" + NL + "\t\treturn name;" + NL + "\t}" + NL + "}";
+  protected final String TEXT_26 = NL;
 
   public String generate(Object argument)
   {
@@ -71,60 +65,60 @@ public class ModelSearchParticipantArea
      } 
     stringBuffer.append(TEXT_4);
      for (GenPackage p : genPackagesList) { 
-    stringBuffer.append(TEXT_5);
+    stringBuffer.append(TEXT_2);
     stringBuffer.append(p.getQualifiedPackageInterfaceName());
+    stringBuffer.append(TEXT_3);
+     } 
+    stringBuffer.append(TEXT_5);
+     for (GenPackage p : genPackagesList) { 
     stringBuffer.append(TEXT_6);
-     } 
+    stringBuffer.append(p.getPackageInterfaceName());
     stringBuffer.append(TEXT_7);
-     for (GenPackage p : genPackagesList) { 
+    stringBuffer.append(p.getItemProviderAdapterFactoryClassName());
     stringBuffer.append(TEXT_8);
-    stringBuffer.append(p.getPackageInterfaceName());
+     } 
     stringBuffer.append(TEXT_9);
-    stringBuffer.append(p.getItemProviderAdapterFactoryClassName());
+     for (GenPackage p : genPackagesList) { 
     stringBuffer.append(TEXT_10);
-     } 
-    stringBuffer.append(TEXT_11);
-     for (GenPackage p : genPackagesList) { 
-    stringBuffer.append(TEXT_12);
     stringBuffer.append(p.getItemProviderAdapterFactoryClassName());
-    stringBuffer.append(TEXT_13);
+    stringBuffer.append(TEXT_11);
      } 
-    stringBuffer.append(TEXT_14);
+    stringBuffer.append(TEXT_12);
      for (GenPackage p : genPackagesList) { 
-    stringBuffer.append(TEXT_15);
+    stringBuffer.append(TEXT_6);
     stringBuffer.append(p.getPackageInterfaceName());
+    stringBuffer.append(TEXT_13);
+    stringBuffer.append(p.getPackageInterfaceName());
+    stringBuffer.append(TEXT_14);
+     } 
+    stringBuffer.append(TEXT_15);
+     for (GenPackage p : genPackagesList) { 
     stringBuffer.append(TEXT_16);
     stringBuffer.append(p.getPackageInterfaceName());
     stringBuffer.append(TEXT_17);
-     } 
+    stringBuffer.append(genPackagesList.indexOf(p)==genPackagesList.size()-1?"":",");
     stringBuffer.append(TEXT_18);
-     for (GenPackage p : genPackagesList) { 
+     } 
     stringBuffer.append(TEXT_19);
+     for (GenPackage p : genPackagesList) { 
+    stringBuffer.append(TEXT_6);
     stringBuffer.append(p.getPackageInterfaceName());
     stringBuffer.append(TEXT_20);
-    stringBuffer.append(genPackagesList.indexOf(p)==genPackagesList.size()-1?"":",");
+     } 
     stringBuffer.append(TEXT_21);
-     } 
+     for (GenPackage p : genPackagesList) { 
+    stringBuffer.append(TEXT_16);
+    stringBuffer.append(p.getPackageInterfaceName());
     stringBuffer.append(TEXT_22);
-     for (GenPackage p : genPackagesList) { 
-    stringBuffer.append(TEXT_23);
-    stringBuffer.append(p.getPackageInterfaceName());
-    stringBuffer.append(TEXT_24);
-     } 
-    stringBuffer.append(TEXT_25);
-     for (GenPackage p : genPackagesList) { 
-    stringBuffer.append(TEXT_26);
-    stringBuffer.append(p.getPackageInterfaceName());
-    stringBuffer.append(TEXT_27);
     stringBuffer.append(genPackagesList.indexOf(p)==genPackagesList.size()-1?"":",");
-    stringBuffer.append(TEXT_28);
+    stringBuffer.append(TEXT_18);
      } 
-    stringBuffer.append(TEXT_29);
+    stringBuffer.append(TEXT_23);
     stringBuffer.append(editPluginClass);
-    stringBuffer.append(TEXT_30);
+    stringBuffer.append(TEXT_24);
     stringBuffer.append(editPluginClass);
-    stringBuffer.append(TEXT_31);
-    stringBuffer.append(TEXT_32);
+    stringBuffer.append(TEXT_25);
+    stringBuffer.append(TEXT_26);
     return stringBuffer.toString();
   }
 }

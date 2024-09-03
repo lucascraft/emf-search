@@ -1,0 +1,167 @@
+<project>
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>org.eclipse.emf.search</groupId>
+ <artifactId>releng</artifactId>
+ <version>0.7.1-SNAPSHOT</version>
+ <packaging>pom</packaging>
+
+ <properties>
+  <tycho.version>4.0.8</tycho.version>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+ </properties>
+  
+ 
+ <build>
+   <pluginManagement>
+     <plugins>
+       <plugin>
+         <groupId>org.eclipse.tycho</groupId>
+         <artifactId>tycho-p2-director-plugin</artifactId>
+         <version>${tycho.version}</version>
+       </plugin>
+     </plugins>
+   </pluginManagement>
+
+  <plugins>
+   <plugin>
+    <groupId>org.eclipse.tycho</groupId>
+    <artifactId>tycho-maven-plugin</artifactId>
+    <version>${tycho.version}</version>
+    <extensions>true</extensions>
+   </plugin>
+   <!--Enable the replacement of the SNAPSHOT version in the final product configuration-->
+   <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-packaging-plugin</artifactId>
+             <version>${tycho.version}</version>
+             <executions>
+              <execution>
+                <phase>package</phase>
+                <id>package-feature</id>
+                    <configuration>
+                        <finalName>${project.artifactId}_${unqualifiedVersion}.${buildQualifier}</finalName>
+                    </configuration>
+            </execution>
+        </executions>
+    </plugin>
+
+	
+    
+    <plugin>
+    <groupId>org.eclipse.tycho</groupId>
+    <artifactId>target-platform-configuration</artifactId>
+    <version>${tycho.version}</version>
+    <configuration>
+     <!-- Optional set the Java version you are using-->
+     <executionEnvironment>JavaSE-21</executionEnvironment>
+ 
+    
+     <target>
+      <file>../../../target/org.eclipse.emf.search.target/emf-search-all-target.target</file>
+    </target>
+    
+     <environments>
+      <environment>
+       <os>linux</os>
+       <ws>gtk</ws>
+       <arch>x86_64</arch>
+      </environment>
+      <environment>
+       <os>win32</os>
+       <ws>win32</ws>
+       <arch>x86_64</arch>
+      </environment>
+      <environment>
+       <os>macosx</os>
+       <ws>cocoa</ws>
+       <arch>x86_64</arch>
+      </environment>
+     </environments>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
+ 
+ 
+ <repositories>
+  <repository>
+    <id>eclipse main 2024-06</id>
+    <layout>p2</layout>
+	<url>https://download.eclipse.org/releases/2024-06</url>
+  </repository>    
+ </repositories>
+ 
+  <modules>
+	<!-- plugins -->
+
+	<module>../../ecore/plugins/org.eclipse.emf.search</module>
+	<module>../../ecore/plugins/org.eclipse.emf.search.codegen</module>
+	<module>../../ecore/plugins/org.eclipse.emf.search.common</module>
+	<module>../../ecore/plugins/org.eclipse.emf.search.ecore</module>
+	<module>../../ecore/plugins/org.eclipse.emf.search.ecore.ocl</module>
+	
+	<!-- <module>../../ecore/plugins/org.eclipse.emf.search.ecore.ocl.ui</module> -->
+	
+	<module>../../ecore/plugins/org.eclipse.emf.search.common.ui</module>
+	<module>../../ecore/plugins/org.eclipse.emf.search.ecore.ui</module>
+	
+	<module>../../ecore/plugins/org.eclipse.emf.search.activities</module>
+	
+	<!-- 
+	<module>../../ecore/plugins/org.eclipse.emf.ecoretools.diagram.search</module> 
+	<module>../../ecore/plugins/org.eclipse.emf.search.doc</module>
+	-->
+	
+	<module>../../meta/plugins/org.eclipse.emf.search.ui</module>
+	<module>../../meta/plugins/org.eclipse.emf.search.genmodel</module>
+	<module>../../meta/plugins/org.eclipse.emf.search.genmodel.ui</module>
+	<module>../../meta/plugins/org.eclipse.emf.search.ocl</module>
+	
+	<!-- <module>../../meta/plugins/org.eclipse.emf.search.ocl.ui</module>
+	<module>../../uml2/plugins/org.eclipse.uml2.diagram.clazz.search</module>
+	-->
+	<module>../../uml2/plugins/org.eclipse.uml2.search</module>
+	<module>../../uml2/plugins/org.eclipse.uml2.search.common.ui</module>
+	<module>../../uml2/plugins/org.eclipse.uml2.search.ocl</module>
+	<!--
+	<module>../../uml2/plugins/org.eclipse.uml2.search.ocl.ui</module>
+	-->
+	<module>../../uml2/plugins/org.eclipse.uml2.search.ui</module>
+
+	<!-- features -->
+
+	<module>../../meta/features/org.eclipse.emf.search.runtime-feature</module>
+	<module>../../meta/features/org.eclipse.emf.search.genmodel-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.codegen-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.common-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.ecore-feature</module>
+
+	<module>../../uml2/features/org.eclipse.uml2.search.runtime-feature</module>
+	<module>../../uml2/features/org.eclipse.uml2.search.common-feature</module>
+
+	<!--
+	<module>../../ecore/features/org.eclipse.emf.ecoretools.diagram.search-feature</module>
+	<module>../../meta/features/org.eclipse.emf.search.sdk-feature</module>
+	<module>../../meta/features/org.eclipse.emf.search.ocl-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.ecore.ocl-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.doc-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.all.runtime-feature</module>
+	<module>../../ecore/features/org.eclipse.emf.search.all.sdk-feature</module>
+	<module>../../uml2/features/org.eclipse.uml2.search-feature</module>
+	<module>../../uml2/features/org.eclipse.uml2.search.ocl-feature</module>
+	<module>../../uml2/features/org.eclipse.uml2.diagram.clazz.search-feature</module>
+	-->
+	
+	<!-- site -->	
+
+	<!--
+    
+	<module>../org.polarsys.capella.datascience.site</module>
+	
+	<module>../org.polarsys.capella.datascience.netcdf.model.search</module>
+	<module>../org.polarsys.capella.datascience.netcdf.model.search.ui</module>
+	-->
+ </modules>
+</project>

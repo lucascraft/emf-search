@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.emf.search.sdk"
+      id="org.eclipse.emf.search.sdk.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -23,35 +23,35 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.common"
+         id="org.eclipse.emf.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.doc"
+         id="org.eclipse.emf.search.doc.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.ecore.ocl"
+         id="org.eclipse.emf.search.ecore.ocl.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.ocl"
+         id="org.eclipse.emf.search.ocl.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.ecore"
+         id="org.eclipse.emf.search.ecore.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.codegen"
+         id="org.eclipse.emf.search.codegen.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.runtime"
+         id="org.eclipse.emf.search.runtime.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.genmodel"
+         id="org.eclipse.emf.search.genmodel.feature"
          version="0.0.0"/>
 
 </feature>

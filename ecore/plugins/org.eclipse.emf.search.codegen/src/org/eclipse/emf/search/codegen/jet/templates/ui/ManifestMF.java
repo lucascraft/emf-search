@@ -18,13 +18,9 @@ public class ManifestMF
   protected final String TEXT_2 = ".search.ui;singleton:=true" + NL + "Bundle-Version: 1.0.0" + NL + "Bundle-Vendor: %providerName" + NL + "Bundle-Activator: search.ui.Activator" + NL + "Bundle-Localization: plugin" + NL + "Require-Bundle: org.eclipse.ui," + NL + " org.eclipse.core.runtime,";
   protected final String TEXT_3 = NL + " ";
   protected final String TEXT_4 = ",";
-  protected final String TEXT_5 = NL + " ";
-  protected final String TEXT_6 = ",";
-  protected final String TEXT_7 = NL + " ";
-  protected final String TEXT_8 = "," + NL + " org.eclipse.emf.search," + NL + " org.eclipse.emf.search.ui,";
-  protected final String TEXT_9 = NL + " ";
-  protected final String TEXT_10 = ".search," + NL + " org.eclipse.emf.search.ecore.ui," + NL + " org.eclipse.emf.ecore.edit," + NL + " org.eclipse.emf.ecore.editor" + NL + "Bundle-ActivationPolicy: lazy" + NL + "Bundle-RequiredExecutionEnvironment: J2SE-1.5" + NL + "Export-Package: search.ui.areas," + NL + " search.ui.factories," + NL + " search.ui.l10n," + NL + " search.ui.factories," + NL + " search.ui.handlers";
-  protected final String TEXT_11 = NL;
+  protected final String TEXT_5 = "," + NL + " org.eclipse.emf.search," + NL + " org.eclipse.emf.search.ui,";
+  protected final String TEXT_6 = ".search," + NL + " org.eclipse.emf.search.ecore.ui," + NL + " org.eclipse.emf.ecore.edit," + NL + " org.eclipse.emf.ecore.editor" + NL + "Bundle-ActivationPolicy: lazy" + NL + "Bundle-RequiredExecutionEnvironment: J2SE-1.5" + NL + "Export-Package: search.ui.areas," + NL + " search.ui.factories," + NL + " search.ui.l10n," + NL + " search.ui.factories," + NL + " search.ui.handlers";
+  protected final String TEXT_7 = NL;
 
   public String generate(Object argument)
   {
@@ -41,16 +37,16 @@ public class ManifestMF
     stringBuffer.append(TEXT_3);
     stringBuffer.append(modelPluginID);
     stringBuffer.append(TEXT_4);
-    stringBuffer.append(TEXT_5);
+    stringBuffer.append(TEXT_3);
     stringBuffer.append(editPluginID);
+    stringBuffer.append(TEXT_4);
+    stringBuffer.append(TEXT_3);
+    stringBuffer.append(editorPluginID);
+    stringBuffer.append(TEXT_5);
+    stringBuffer.append(TEXT_3);
+    stringBuffer.append(modelPluginID);
     stringBuffer.append(TEXT_6);
     stringBuffer.append(TEXT_7);
-    stringBuffer.append(editorPluginID);
-    stringBuffer.append(TEXT_8);
-    stringBuffer.append(TEXT_9);
-    stringBuffer.append(modelPluginID);
-    stringBuffer.append(TEXT_10);
-    stringBuffer.append(TEXT_11);
     return stringBuffer.toString();
   }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.emf.search.all.sdk"
+      id="org.eclipse.emf.search.all.sdk.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -23,23 +23,23 @@
    </url>
 
    <includes
-         id="org.eclipse.uml2.search"
+         id="org.eclipse.uml2.search.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.sdk"
+         id="org.eclipse.emf.search.sdk.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecoretools.diagram.search"
+         id="org.eclipse.emf.ecoretools.diagram.search.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.diagram.clazz.search"
+         id="org.eclipse.uml2.diagram.clazz.search.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.examples"
+         id="org.eclipse.emf.search.examples.feature"
          version="0.0.0"/>
 
 </feature>

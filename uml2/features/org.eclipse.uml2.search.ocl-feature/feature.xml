@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.uml2.search.ocl"
+      id="org.eclipse.uml2.search.ocl.feature"
       label="%featureName"
       version="0.7.1.qualifier"
       provider-name="%providerName">
@@ -23,19 +23,19 @@
    </url>
 
    <includes
-         id="org.eclipse.emf.search.ecore.ocl"
+         id="org.eclipse.emf.search.ecore.ocl.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.search.ecore"
+         id="org.eclipse.emf.search.ecore.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search.common"
+         id="org.eclipse.uml2.search.common.feature"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.uml2.search.runtime"
+         id="org.eclipse.uml2.search.runtime.feature"
          version="0.0.0"/>
 
    <requires>
@@ -56,16 +56,10 @@
 
    <plugin
          id="org.eclipse.uml2.search.ocl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.uml2.search.ocl.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>
