@@ -40,7 +40,7 @@
   
   <packaging>eclipse-feature</packaging>
   
-  <name>Eclipse Search For UML2 Feature</name>
+  <name>Eclipse Search Feature</name>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>

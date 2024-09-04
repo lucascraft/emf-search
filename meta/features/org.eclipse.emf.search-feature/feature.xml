@@ -46,7 +46,7 @@
    <includes
          id="org.eclipse.emf.search.runtime.feature"
          version="0.0.0"/>
-
+<!--
    <includes
          id="org.eclipse.emf.search.ecore.ocl.feature"
          version="0.0.0"/>
@@ -54,7 +54,7 @@
    <includes
          id="org.eclipse.emf.search.ocl.feature"
          version="0.0.0"/>
-
+-->
    <includes
          id="org.eclipse.emf.search.genmodel.feature"
          version="0.0.0"/>

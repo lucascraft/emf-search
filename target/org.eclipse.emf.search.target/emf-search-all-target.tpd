@@ -22,6 +22,7 @@ location "https://download.eclipse.org/ecoretools/updates/releases/3.5.1/2023-06
 	
 }
 
+
 //location "http://download.eclipse.org/releases/galileo/"
 //{
 //	org.eclipse.emf.ecoretools

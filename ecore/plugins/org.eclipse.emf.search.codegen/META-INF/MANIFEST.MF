@@ -30,7 +30,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.codegen.ui,
  org.eclipse.emf.codegen.ecore.ui,
  org.eclipse.emf.search.common;bundle-version="0.7.1"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.eclipse.emf.search.codegen,
  org.eclipse.emf.search.codegen.constants,
  org.eclipse.emf.search.codegen.engine,
