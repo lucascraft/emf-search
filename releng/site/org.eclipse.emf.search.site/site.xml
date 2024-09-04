@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.emf.search.feature_0.7.1.qualifier.jar" id="org.eclipse.emf.search.feature" version="0.7.1.qualifier">
+      <category name="org.eclipse.emf.search.category"/>
+   </feature>
+   <category-def name="org.eclipse.emf.search.category" label="EMF Search"/>
+</site>
